@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.MinimizeAppButton = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.CloseButton = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.MainPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.ProductsButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.DashboardButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.MainPanel = new Bunifu.UI.WinForms.BunifuPanel();
-            this.CloseButton = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.MinimizeAppButton = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.bunifuShadowPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +77,90 @@
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 1;
             // 
+            // MinimizeAppButton
+            // 
+            this.MinimizeAppButton.ActiveImage = global::InventoryManagementSystem.Properties.Resources.Minimize;
+            this.MinimizeAppButton.AllowAnimations = true;
+            this.MinimizeAppButton.AllowBuffering = false;
+            this.MinimizeAppButton.AllowToggling = false;
+            this.MinimizeAppButton.AllowZooming = true;
+            this.MinimizeAppButton.AllowZoomingOnFocus = false;
+            this.MinimizeAppButton.BackColor = System.Drawing.Color.Transparent;
+            this.MinimizeAppButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.MinimizeAppButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("MinimizeAppButton.ErrorImage")));
+            this.MinimizeAppButton.FadeWhenInactive = false;
+            this.MinimizeAppButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.MinimizeAppButton.Image = global::InventoryManagementSystem.Properties.Resources.Minimize;
+            this.MinimizeAppButton.ImageActive = global::InventoryManagementSystem.Properties.Resources.Minimize;
+            this.MinimizeAppButton.ImageLocation = null;
+            this.MinimizeAppButton.ImageMargin = 0;
+            this.MinimizeAppButton.ImageSize = new System.Drawing.Size(29, 29);
+            this.MinimizeAppButton.ImageZoomSize = new System.Drawing.Size(30, 30);
+            this.MinimizeAppButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("MinimizeAppButton.InitialImage")));
+            this.MinimizeAppButton.Location = new System.Drawing.Point(992, 0);
+            this.MinimizeAppButton.Name = "MinimizeAppButton";
+            this.MinimizeAppButton.Rotation = 0;
+            this.MinimizeAppButton.ShowActiveImage = true;
+            this.MinimizeAppButton.ShowCursorChanges = true;
+            this.MinimizeAppButton.ShowImageBorders = true;
+            this.MinimizeAppButton.ShowSizeMarkers = false;
+            this.MinimizeAppButton.Size = new System.Drawing.Size(30, 30);
+            this.MinimizeAppButton.TabIndex = 3;
+            this.MinimizeAppButton.ToolTipText = "";
+            this.MinimizeAppButton.WaitOnLoad = false;
+            this.MinimizeAppButton.Zoom = 0;
+            this.MinimizeAppButton.ZoomSpeed = 10;
+            this.MinimizeAppButton.Click += new System.EventHandler(this.MinimizeAppButton_Click);
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.ActiveImage = global::InventoryManagementSystem.Properties.Resources.Close;
+            this.CloseButton.AllowAnimations = true;
+            this.CloseButton.AllowBuffering = false;
+            this.CloseButton.AllowToggling = false;
+            this.CloseButton.AllowZooming = true;
+            this.CloseButton.AllowZoomingOnFocus = false;
+            this.CloseButton.BackColor = System.Drawing.Color.Transparent;
+            this.CloseButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.CloseButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("CloseButton.ErrorImage")));
+            this.CloseButton.FadeWhenInactive = false;
+            this.CloseButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.CloseButton.Image = global::InventoryManagementSystem.Properties.Resources.Close;
+            this.CloseButton.ImageActive = global::InventoryManagementSystem.Properties.Resources.Close;
+            this.CloseButton.ImageLocation = null;
+            this.CloseButton.ImageMargin = 0;
+            this.CloseButton.ImageSize = new System.Drawing.Size(29, 29);
+            this.CloseButton.ImageZoomSize = new System.Drawing.Size(30, 30);
+            this.CloseButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("CloseButton.InitialImage")));
+            this.CloseButton.Location = new System.Drawing.Point(1028, 1);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Rotation = 0;
+            this.CloseButton.ShowActiveImage = true;
+            this.CloseButton.ShowCursorChanges = true;
+            this.CloseButton.ShowImageBorders = true;
+            this.CloseButton.ShowSizeMarkers = false;
+            this.CloseButton.Size = new System.Drawing.Size(30, 30);
+            this.CloseButton.TabIndex = 3;
+            this.CloseButton.ToolTipText = "";
+            this.CloseButton.WaitOnLoad = false;
+            this.CloseButton.Zoom = 0;
+            this.CloseButton.ZoomSpeed = 10;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // MainPanel
+            // 
+            this.MainPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(224)))));
+            this.MainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainPanel.BackgroundImage")));
+            this.MainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainPanel.BorderColor = System.Drawing.Color.Transparent;
+            this.MainPanel.BorderRadius = 15;
+            this.MainPanel.BorderThickness = 1;
+            this.MainPanel.Location = new System.Drawing.Point(239, 36);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.ShowBorders = true;
+            this.MainPanel.Size = new System.Drawing.Size(820, 605);
+            this.MainPanel.TabIndex = 2;
+            // 
             // ProductsButton
             // 
             this.ProductsButton.AllowAnimations = true;
@@ -95,11 +180,11 @@
             this.ProductsButton.ColorContrastOnClick = 45;
             this.ProductsButton.ColorContrastOnHover = 45;
             this.ProductsButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.ProductsButton.CustomizableEdges = borderEdges5;
+            borderEdges9.BottomLeft = true;
+            borderEdges9.BottomRight = true;
+            borderEdges9.TopLeft = true;
+            borderEdges9.TopRight = true;
+            this.ProductsButton.CustomizableEdges = borderEdges9;
             this.ProductsButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ProductsButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ProductsButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -185,11 +270,11 @@
             this.bunifuButton3.ColorContrastOnClick = 45;
             this.bunifuButton3.ColorContrastOnHover = 45;
             this.bunifuButton3.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.bunifuButton3.CustomizableEdges = borderEdges6;
+            borderEdges10.BottomLeft = true;
+            borderEdges10.BottomRight = true;
+            borderEdges10.TopLeft = true;
+            borderEdges10.TopRight = true;
+            this.bunifuButton3.CustomizableEdges = borderEdges10;
             this.bunifuButton3.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton3.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -274,11 +359,11 @@
             this.bunifuButton4.ColorContrastOnClick = 45;
             this.bunifuButton4.ColorContrastOnHover = 45;
             this.bunifuButton4.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.bunifuButton4.CustomizableEdges = borderEdges7;
+            borderEdges11.BottomLeft = true;
+            borderEdges11.BottomRight = true;
+            borderEdges11.TopLeft = true;
+            borderEdges11.TopRight = true;
+            this.bunifuButton4.CustomizableEdges = borderEdges11;
             this.bunifuButton4.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton4.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -363,11 +448,11 @@
             this.DashboardButton.ColorContrastOnClick = 45;
             this.DashboardButton.ColorContrastOnHover = 45;
             this.DashboardButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.DashboardButton.CustomizableEdges = borderEdges8;
+            borderEdges12.BottomLeft = true;
+            borderEdges12.BottomRight = true;
+            borderEdges12.TopLeft = true;
+            borderEdges12.TopRight = true;
+            this.DashboardButton.CustomizableEdges = borderEdges12;
             this.DashboardButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.DashboardButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.DashboardButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -434,95 +519,51 @@
             this.DashboardButton.UseDefaultRadiusAndThickness = true;
             this.DashboardButton.Click += new System.EventHandler(this.DashboardButton_Click);
             // 
-            // MainPanel
+            // bunifuFormDock1
             // 
-            this.MainPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(224)))));
-            this.MainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainPanel.BackgroundImage")));
-            this.MainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.MainPanel.BorderColor = System.Drawing.Color.Transparent;
-            this.MainPanel.BorderRadius = 15;
-            this.MainPanel.BorderThickness = 1;
-            this.MainPanel.Location = new System.Drawing.Point(239, 36);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.ShowBorders = true;
-            this.MainPanel.Size = new System.Drawing.Size(810, 605);
-            this.MainPanel.TabIndex = 2;
-            // 
-            // CloseButton
-            // 
-            this.CloseButton.ActiveImage = global::InventoryManagementSystem.Properties.Resources.Close;
-            this.CloseButton.AllowAnimations = true;
-            this.CloseButton.AllowBuffering = false;
-            this.CloseButton.AllowToggling = false;
-            this.CloseButton.AllowZooming = true;
-            this.CloseButton.AllowZoomingOnFocus = false;
-            this.CloseButton.BackColor = System.Drawing.Color.Transparent;
-            this.CloseButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.CloseButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("CloseButton.ErrorImage")));
-            this.CloseButton.FadeWhenInactive = false;
-            this.CloseButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.CloseButton.Image = global::InventoryManagementSystem.Properties.Resources.Close;
-            this.CloseButton.ImageActive = global::InventoryManagementSystem.Properties.Resources.Close;
-            this.CloseButton.ImageLocation = null;
-            this.CloseButton.ImageMargin = 0;
-            this.CloseButton.ImageSize = new System.Drawing.Size(29, 29);
-            this.CloseButton.ImageZoomSize = new System.Drawing.Size(30, 30);
-            this.CloseButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("CloseButton.InitialImage")));
-            this.CloseButton.Location = new System.Drawing.Point(1028, 1);
-            this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Rotation = 0;
-            this.CloseButton.ShowActiveImage = true;
-            this.CloseButton.ShowCursorChanges = true;
-            this.CloseButton.ShowImageBorders = true;
-            this.CloseButton.ShowSizeMarkers = false;
-            this.CloseButton.Size = new System.Drawing.Size(30, 30);
-            this.CloseButton.TabIndex = 3;
-            this.CloseButton.ToolTipText = "";
-            this.CloseButton.WaitOnLoad = false;
-            this.CloseButton.Zoom = 0;
-            this.CloseButton.ZoomSpeed = 10;
-            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
-            // 
-            // MinimizeAppButton
-            // 
-            this.MinimizeAppButton.ActiveImage = global::InventoryManagementSystem.Properties.Resources.Minimize;
-            this.MinimizeAppButton.AllowAnimations = true;
-            this.MinimizeAppButton.AllowBuffering = false;
-            this.MinimizeAppButton.AllowToggling = false;
-            this.MinimizeAppButton.AllowZooming = true;
-            this.MinimizeAppButton.AllowZoomingOnFocus = false;
-            this.MinimizeAppButton.BackColor = System.Drawing.Color.Transparent;
-            this.MinimizeAppButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.MinimizeAppButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("MinimizeAppButton.ErrorImage")));
-            this.MinimizeAppButton.FadeWhenInactive = false;
-            this.MinimizeAppButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.MinimizeAppButton.Image = global::InventoryManagementSystem.Properties.Resources.Minimize;
-            this.MinimizeAppButton.ImageActive = global::InventoryManagementSystem.Properties.Resources.Minimize;
-            this.MinimizeAppButton.ImageLocation = null;
-            this.MinimizeAppButton.ImageMargin = 0;
-            this.MinimizeAppButton.ImageSize = new System.Drawing.Size(29, 29);
-            this.MinimizeAppButton.ImageZoomSize = new System.Drawing.Size(30, 30);
-            this.MinimizeAppButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("MinimizeAppButton.InitialImage")));
-            this.MinimizeAppButton.Location = new System.Drawing.Point(992, 0);
-            this.MinimizeAppButton.Name = "MinimizeAppButton";
-            this.MinimizeAppButton.Rotation = 0;
-            this.MinimizeAppButton.ShowActiveImage = true;
-            this.MinimizeAppButton.ShowCursorChanges = true;
-            this.MinimizeAppButton.ShowImageBorders = true;
-            this.MinimizeAppButton.ShowSizeMarkers = false;
-            this.MinimizeAppButton.Size = new System.Drawing.Size(30, 30);
-            this.MinimizeAppButton.TabIndex = 3;
-            this.MinimizeAppButton.ToolTipText = "";
-            this.MinimizeAppButton.WaitOnLoad = false;
-            this.MinimizeAppButton.Zoom = 0;
-            this.MinimizeAppButton.ZoomSpeed = 10;
-            this.MinimizeAppButton.Click += new System.EventHandler(this.MinimizeAppButton_Click);
+            this.bunifuFormDock1.AllowFormDragging = true;
+            this.bunifuFormDock1.AllowFormDropShadow = true;
+            this.bunifuFormDock1.AllowFormResizing = true;
+            this.bunifuFormDock1.AllowHidingBottomRegion = true;
+            this.bunifuFormDock1.AllowOpacityChangesWhileDragging = false;
+            this.bunifuFormDock1.BorderOptions.BottomBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.BottomBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.BottomBorder.ShowBorder = true;
+            this.bunifuFormDock1.BorderOptions.LeftBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.LeftBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.LeftBorder.ShowBorder = true;
+            this.bunifuFormDock1.BorderOptions.RightBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.RightBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.RightBorder.ShowBorder = true;
+            this.bunifuFormDock1.BorderOptions.TopBorder.BorderColor = System.Drawing.Color.Silver;
+            this.bunifuFormDock1.BorderOptions.TopBorder.BorderThickness = 1;
+            this.bunifuFormDock1.BorderOptions.TopBorder.ShowBorder = true;
+            this.bunifuFormDock1.ContainerControl = this;
+            this.bunifuFormDock1.DockingIndicatorsColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(215)))), ((int)(((byte)(233)))));
+            this.bunifuFormDock1.DockingIndicatorsOpacity = 0.5D;
+            this.bunifuFormDock1.DockingOptions.DockAll = true;
+            this.bunifuFormDock1.DockingOptions.DockBottomLeft = true;
+            this.bunifuFormDock1.DockingOptions.DockBottomRight = true;
+            this.bunifuFormDock1.DockingOptions.DockFullScreen = true;
+            this.bunifuFormDock1.DockingOptions.DockLeft = true;
+            this.bunifuFormDock1.DockingOptions.DockRight = true;
+            this.bunifuFormDock1.DockingOptions.DockTopLeft = true;
+            this.bunifuFormDock1.DockingOptions.DockTopRight = true;
+            this.bunifuFormDock1.FormDraggingOpacity = 0.9D;
+            this.bunifuFormDock1.ParentForm = this;
+            this.bunifuFormDock1.ShowCursorChanges = true;
+            this.bunifuFormDock1.ShowDockingIndicators = true;
+            this.bunifuFormDock1.TitleBarOptions.AllowFormDragging = true;
+            this.bunifuFormDock1.TitleBarOptions.BunifuFormDock = this.bunifuFormDock1;
+            this.bunifuFormDock1.TitleBarOptions.DoubleClickToExpandWindow = true;
+            this.bunifuFormDock1.TitleBarOptions.TitleBarControl = null;
+            this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
             // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1060, 655);
+            this.ClientSize = new System.Drawing.Size(1070, 655);
             this.Controls.Add(this.MinimizeAppButton);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.MainPanel);
@@ -530,7 +571,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Inventory Management System";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.bunifuShadowPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -548,6 +589,7 @@
         private Bunifu.UI.WinForms.BunifuPanel MainPanel;
         private Bunifu.UI.WinForms.BunifuImageButton CloseButton;
         private Bunifu.UI.WinForms.BunifuImageButton MinimizeAppButton;
+        private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
     }
 }
 
