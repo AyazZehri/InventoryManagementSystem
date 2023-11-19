@@ -149,12 +149,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
     <Compile Include="General.cs" />
     <Compile Include="ItemCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ItemCard.Designer.cs">
       <DependentUpon>ItemCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemSalePanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemSalePanel.Designer.cs">
+      <DependentUpon>ItemSalePanel.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -176,8 +188,20 @@
     <Compile Include="Sale.Designer.cs">
       <DependentUpon>Sale.cs</DependentUpon>
     </Compile>
+    <Compile Include="SaleLedger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaleLedger.Designer.cs">
+      <DependentUpon>SaleLedger.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Customers.resx">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ItemCard.resx">
       <DependentUpon>ItemCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemSalePanel.resx">
+      <DependentUpon>ItemSalePanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -199,6 +223,9 @@
     <EmbeddedResource Include="Sale.resx">
       <DependentUpon>Sale.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SaleLedger.resx">
+      <DependentUpon>SaleLedger.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -218,6 +245,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InventoryIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trolly.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

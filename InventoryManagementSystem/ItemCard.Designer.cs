@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemCard));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.TypeLabel = new Bunifu.UI.WinForms.BunifuLabel();
             this.QualityLabel = new Bunifu.UI.WinForms.BunifuLabel();
             this.NameLabel = new Bunifu.UI.WinForms.BunifuLabel();
@@ -43,7 +42,9 @@
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.IDLabel = new Bunifu.UI.WinForms.BunifuLabel();
-            this.CustomButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TypeLabel
@@ -206,121 +207,51 @@
             // IDLabel
             // 
             this.IDLabel.AllowParentOverrides = false;
-            this.IDLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.IDLabel.AutoEllipsis = false;
+            this.IDLabel.AutoSize = false;
             this.IDLabel.CursorType = null;
+            this.IDLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.IDLabel.Font = new System.Drawing.Font("Bebas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IDLabel.ForeColor = System.Drawing.Color.Black;
-            this.IDLabel.Location = new System.Drawing.Point(7, 7);
+            this.IDLabel.ForeColor = System.Drawing.Color.White;
+            this.IDLabel.Location = new System.Drawing.Point(0, 0);
             this.IDLabel.Name = "IDLabel";
+            this.IDLabel.Padding = new System.Windows.Forms.Padding(8, 0, 10, 0);
             this.IDLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.IDLabel.Size = new System.Drawing.Size(14, 23);
+            this.IDLabel.Size = new System.Drawing.Size(68, 28);
             this.IDLabel.TabIndex = 1;
-            this.IDLabel.Text = "10";
+            this.IDLabel.Text = "8";
             this.IDLabel.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.IDLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // CustomButton
+            // bunifuElipse1
             // 
-            this.CustomButton.AllowAnimations = true;
-            this.CustomButton.AllowMouseEffects = true;
-            this.CustomButton.AllowToggling = false;
-            this.CustomButton.AnimationSpeed = 200;
-            this.CustomButton.AutoGenerateColors = false;
-            this.CustomButton.AutoRoundBorders = true;
-            this.CustomButton.AutoSizeLeftIcon = true;
-            this.CustomButton.AutoSizeRightIcon = true;
-            this.CustomButton.BackColor = System.Drawing.Color.Transparent;
-            this.CustomButton.BackColor1 = System.Drawing.Color.Black;
-            this.CustomButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CustomButton.BackgroundImage")));
-            this.CustomButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.CustomButton.ButtonText = "+";
-            this.CustomButton.ButtonTextMarginLeft = 0;
-            this.CustomButton.ColorContrastOnClick = 45;
-            this.CustomButton.ColorContrastOnHover = 45;
-            this.CustomButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.CustomButton.CustomizableEdges = borderEdges1;
-            this.CustomButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.CustomButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.CustomButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.CustomButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.CustomButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.CustomButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustomButton.ForeColor = System.Drawing.Color.White;
-            this.CustomButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CustomButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.CustomButton.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.CustomButton.IconMarginLeft = 11;
-            this.CustomButton.IconPadding = 10;
-            this.CustomButton.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.CustomButton.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.CustomButton.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.CustomButton.IconSize = 25;
-            this.CustomButton.IdleBorderColor = System.Drawing.Color.Black;
-            this.CustomButton.IdleBorderRadius = 23;
-            this.CustomButton.IdleBorderThickness = 1;
-            this.CustomButton.IdleFillColor = System.Drawing.Color.Black;
-            this.CustomButton.IdleIconLeftImage = null;
-            this.CustomButton.IdleIconRightImage = null;
-            this.CustomButton.IndicateFocus = false;
-            this.CustomButton.Location = new System.Drawing.Point(146, 3);
-            this.CustomButton.Name = "CustomButton";
-            this.CustomButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.CustomButton.OnDisabledState.BorderRadius = 30;
-            this.CustomButton.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.CustomButton.OnDisabledState.BorderThickness = 1;
-            this.CustomButton.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.CustomButton.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.CustomButton.OnDisabledState.IconLeftImage = null;
-            this.CustomButton.OnDisabledState.IconRightImage = null;
-            this.CustomButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.CustomButton.onHoverState.BorderRadius = 30;
-            this.CustomButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.CustomButton.onHoverState.BorderThickness = 1;
-            this.CustomButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.CustomButton.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.CustomButton.onHoverState.IconLeftImage = null;
-            this.CustomButton.onHoverState.IconRightImage = null;
-            this.CustomButton.OnIdleState.BorderColor = System.Drawing.Color.Black;
-            this.CustomButton.OnIdleState.BorderRadius = 30;
-            this.CustomButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.CustomButton.OnIdleState.BorderThickness = 1;
-            this.CustomButton.OnIdleState.FillColor = System.Drawing.Color.Black;
-            this.CustomButton.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.CustomButton.OnIdleState.IconLeftImage = null;
-            this.CustomButton.OnIdleState.IconRightImage = null;
-            this.CustomButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.CustomButton.OnPressedState.BorderRadius = 30;
-            this.CustomButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.CustomButton.OnPressedState.BorderThickness = 1;
-            this.CustomButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.CustomButton.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.CustomButton.OnPressedState.IconLeftImage = null;
-            this.CustomButton.OnPressedState.IconRightImage = null;
-            this.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.CustomButton.TabIndex = 2;
-            this.CustomButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.CustomButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.CustomButton.TextMarginLeft = 0;
-            this.CustomButton.TextPadding = new System.Windows.Forms.Padding(0);
-            this.CustomButton.UseDefaultRadiusAndThickness = true;
-            this.CustomButton.Click += new System.EventHandler(this.CustomButton_Click);
+            this.bunifuElipse1.ElipseRadius = 20;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // bunifuPanel1
+            // 
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.Black;
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel1.BorderRadius = 20;
+            this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.IDLabel);
+            this.bunifuPanel1.Location = new System.Drawing.Point(2, 3);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(68, 28);
+            this.bunifuPanel1.TabIndex = 2;
             // 
             // ItemCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.BorderColor = System.Drawing.Color.PaleTurquoise;
+            this.BackgroundColor = System.Drawing.Color.LightSkyBlue;
+            this.BorderColor = System.Drawing.Color.Transparent;
             this.BorderRadius = 10;
-            this.Controls.Add(this.CustomButton);
-            this.Controls.Add(this.IDLabel);
+            this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.bunifuLabel6);
             this.Controls.Add(this.TypeLabel);
             this.Controls.Add(this.bunifuLabel5);
@@ -334,6 +265,10 @@
             this.Margin = new System.Windows.Forms.Padding(8, 3, 3, 8);
             this.Name = "ItemCard";
             this.Size = new System.Drawing.Size(175, 165);
+            this.MouseEnter += new System.EventHandler(this.ItemCard_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.ItemCard_MouseLeave);
+            this.MouseHover += new System.EventHandler(this.ItemCard_MouseHover);
+            this.bunifuPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,6 +287,7 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuLabel IDLabel;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton CustomButton;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
     }
 }

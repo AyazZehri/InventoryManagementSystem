@@ -75,5 +75,20 @@ namespace InventoryManagementSystem
         {
             ButtonClick?.Invoke(this, EventArgs.Empty);
         }
+
+        private void ItemCard_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ItemCard_MouseLeave(object sender, EventArgs e)
+        {
+            BackgroundColor = Color.LightSkyBlue;
+        }
+
+        private void ItemCard_MouseEnter(object sender, EventArgs e)
+        {
+            BackgroundColor = Color.FromArgb(230, 247, 255);
+        }
     }
 }

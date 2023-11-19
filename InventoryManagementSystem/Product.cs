@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms;
 using MySql.Data.MySqlClient;
 
 namespace InventoryManagementSystem
@@ -18,6 +19,8 @@ namespace InventoryManagementSystem
             InitializeComponent();
 
         }
+
+        int price, total, quantity, id;
 
         private void bunifuShadowPanel1_ControlAdded(object sender, ControlEventArgs e)
         {
@@ -36,25 +39,27 @@ namespace InventoryManagementSystem
 
         string Refsql;
 
-        private float GetLastID()
+        private int GetLastID()
         {
             int lastID = 0;
 
             try
             {
 
-                MySqlConnection connection = new MySqlConnection(General.ConString());
-                connection.Open();
-
-                Refsql = $"SELECT ID FROM Products ORDER BY ID DESC LIMIT 1";
-
-
-                MySqlCommand cmd = new MySqlCommand(Refsql, connection);
-                object result = cmd.ExecuteScalar();
-
-                if (result != null && result != DBNull.Value)
+                using (MySqlConnection connection = new MySqlConnection(General.ConString()))
                 {
-                    lastID = Convert.ToInt16(result);
+                    connection.Open();
+
+                    Refsql = $"SELECT ID FROM Products ORDER BY ID DESC LIMIT 1";
+
+
+                    MySqlCommand cmd = new MySqlCommand(Refsql, connection);
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null && result != DBNull.Value)
+                    {
+                        lastID = Convert.ToInt16(result);
+                    }
                 }
             }
             catch (Exception ex)
@@ -71,15 +76,16 @@ namespace InventoryManagementSystem
             {
                 MySqlConnection con = new MySqlConnection(General.ConString());
                 con.Open();
-                string query = "INSERT INTO Products (ID,Name,Type,Quality,Quantity,Price) VALUES (@ID,@Name,@Type,@Quality,@Quantity,@Price)";
+                string query = "INSERT INTO Products (ID,Name,Type,Quality,Quantity,Price_Per_Unit,Total_Amount) VALUES (@ID,@Name,@Type,@Quality,@Quantity,@Price_Per_Unit,@Total_Amount)";
                 MySqlCommand cmd = new MySqlCommand(query, con);
 
-                cmd.Parameters.AddWithValue("ID", GetLastID() + 1);
+                cmd.Parameters.AddWithValue("ID", (GetLastID() + 1));
                 cmd.Parameters.AddWithValue("Name", NameBox.Text);
                 cmd.Parameters.AddWithValue("Type", TypeBox.Text);
                 cmd.Parameters.AddWithValue("Quality", QualityBox.Text);
                 cmd.Parameters.AddWithValue("Quantity", QuantityBox.Text);
-                cmd.Parameters.AddWithValue("Price", PriceBox.Text);
+                cmd.Parameters.AddWithValue("Price_Per_Unit", PriceBox.Text);
+                cmd.Parameters.AddWithValue("Total_Amount", total);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Product Successfully Added to Inventory", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -103,7 +109,7 @@ namespace InventoryManagementSystem
 
                 con.Open();
 
-                string sql = "SELECT * From products";
+                string sql = "SELECT * FROM `products` ORDER BY ID DESC;";
 
                 MySqlCommand cmd = new MySqlCommand(sql, con);
 
@@ -125,12 +131,18 @@ namespace InventoryManagementSystem
                         item.Quality = dr[3].ToString();
                         item.Quantity = dr[4].ToString();
                         item.Price = dr[5].ToString();
+                        item.Click += onClickItem;
                         ItemList.Controls.Add(item);
                     }
 
 
+
                     //ProductsGridView.DataSource = dt;
                 }
+
+                clearBox();
+                id = (GetLastID() + 1);
+                idLabel.Text = id.ToString();
             }
             catch (Exception ex)
             {
@@ -144,35 +156,69 @@ namespace InventoryManagementSystem
         private void Product_Load(object sender, EventArgs e)
         {
             LoadData();
+            idLabel.Text = (GetLastID() + 1).ToString();
+
+        }
+        private ItemCard selectedCard;
+
+        void onClickItem(object sender, EventArgs e)
+        {
+            if (sender is ItemCard clickedItem)
+            {
+
+                // Revert color of the previously selected item
+                if (selectedCard != null)
+                {
+                    selectedCard.BackColor = SystemColors.Control;
+                }
+
+                clickedItem.BackgroundColor = Color.LightSlateGray;
+
+                selectedCard = clickedItem;
+
+                id = Convert.ToInt16(clickedItem.ID);
+                NameBox.Text = clickedItem.ItemName;
+                TypeBox.Text = clickedItem.Type;
+                QualityBox.Text = clickedItem.Quality;
+                QuantityBox.Text = clickedItem.Quantity;
+                PriceBox.Text = clickedItem.Price;
+
+                idLabel.Text = clickedItem.ID;
+
+            }
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            /*  try
-              {
-                  string ID = ProductsGridView.SelectedRows[0].Cells[0].Value.ToString();
+            try
+            {
+                if (id <= 0) { MessageBox.Show("Please Select any Item to Update"); return; }
 
-                  MySqlConnection con = new MySqlConnection(General.ConString());
-                  con.Open();
 
-                  string MySqlCommand = "UPDATE `products` SET `ID` = '@ID', `Name` = '@Name', `Type` = '@Type', `Quality` = '@Quality', `Quantity` = '@Quantity', `Price` = '@Price' WHERE `products`.`ID` = @ID;";
+                MySqlConnection con = new MySqlConnection(General.ConString());
+                con.Open();
 
-                  MySqlCommand cmd = new MySqlCommand(MySqlCommand, con);
-                  cmd.Parameters.AddWithValue("@ID", ID);
-                  cmd.Parameters.AddWithValue("@Name", NameBox.Text);
-                  cmd.Parameters.AddWithValue("@Type", TypeBox.Text);
-                  cmd.Parameters.AddWithValue("@Quality", QualityBox.Text);
-                  cmd.Parameters.AddWithValue("@Quantity", QuantityBox.Text);
-                  cmd.Parameters.AddWithValue("@Price", PriceBox.Text);
+                string MySqlCommand = "UPDATE  products  SET  Name  = @Name,  Type  = @Type,  Quality  = @Quality, Quantity = @Quantity,  Price_Per_Unit  = @Price_Per_Unit, Total_Amount = @Total_Amount WHERE  products . ID  = @ID;";
 
-                  cmd.ExecuteNonQuery();
+                MySqlCommand cmd = new MySqlCommand(MySqlCommand, con);
+                cmd.Parameters.AddWithValue("@ID", id.ToString());
+                cmd.Parameters.AddWithValue("@Name", NameBox.Text);
+                cmd.Parameters.AddWithValue("@Type", TypeBox.Text);
+                cmd.Parameters.AddWithValue("@Quality", QualityBox.Text);
+                cmd.Parameters.AddWithValue("@Quantity", QuantityBox.Text);
+                cmd.Parameters.AddWithValue("@Price_Per_Unit", PriceBox.Text);
+                cmd.Parameters.AddWithValue("@Total_Amount", TotalBox.Text);
 
-                  MessageBox.Show("Data Updated Successfully", "Update ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-              }
-              catch (Exception ex)
-              {
-                  MessageBox.Show("Error: " + ex.Message, "Update Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-              }*/
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Data Updated Successfully", "Update ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Update Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            LoadData();
         }
 
         private void ProductsGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -184,28 +230,62 @@ namespace InventoryManagementSystem
              PriceBox.Text = ProductsGridView.SelectedRows[0].Cells[5].Value.ToString();*/
         }
 
+
+
         private void RemoveButton_Click(object sender, EventArgs e)
         {
             try
             {
-                /*string ID = ProductsGridView.SelectedRows[0].Cells[0].Value.ToString();
+                if (id <= 0) { MessageBox.Show("Please Select an Item to Remove"); return; }
+                string ID = id.ToString();
 
                 MySqlConnection conn = new MySqlConnection(General.ConString());
                 conn.Open();
 
-                string MySqlQuery = "DELETE FROM products WHERE `products`.`ID` = @ID ";
+                string MySqlQuery = "DELETE FROM products WHERE `ID` = @ID ";
 
                 MySqlCommand cmd = new MySqlCommand(MySqlQuery, conn);
 
                 cmd.Parameters.AddWithValue("ID", ID);
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                LoadData();*/
+                LoadData();
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "Update Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            clearBox();
+            id = (GetLastID() + 1);
+            idLabel.Text = id.ToString();
+        }
+
+        private void TotalBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void PriceBox_TextChanged(object sender, EventArgs e)
+        {
+            price = General.ConvertToInt(PriceBox.Text);
+            quantity = General.ConvertToInt(QuantityBox.Text);
+
+            total = price * quantity;
+
+            TotalBox.Text = total.ToString("C");
+        }
+
+        void clearBox()
+        {
+            BunifuTextBox[] boxes = { NameBox, TypeBox, PriceBox, QualityBox, QuantityBox, TotalBox };
+
+            foreach (BunifuTextBox box in boxes)
+            {
+                box.Clear();
             }
         }
     }

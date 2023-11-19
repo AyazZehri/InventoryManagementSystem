@@ -42,7 +42,7 @@ namespace InventoryManagementSystem
 
         private void MinimizeAppButton_Click(object sender, EventArgs e)
         {
-
+            WindowState = FormWindowState.Minimized;
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
@@ -58,6 +58,31 @@ namespace InventoryManagementSystem
         private void MainForm_Load(object sender, EventArgs e)
         {
             DashboardButton.Select();
+        }
+
+        private void SaleButton_Click(object sender, EventArgs e)
+        {
+            loadForm(new Sale());
+        }
+
+        private void CustomersButton_Click(object sender, EventArgs e)
+        {
+            loadForm(new Customers());
+        }
+
+        private void SaleLedgerButton_Click(object sender, EventArgs e)
+        {
+            loadForm(new SaleLedger());
+        }
+
+        private void bunifuPanel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UsersButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
