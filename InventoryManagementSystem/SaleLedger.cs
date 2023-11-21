@@ -53,5 +53,33 @@ namespace InventoryManagementSystem
 
             }
         }
+
+        private void SearchBox_OnIconRightClick(object sender, EventArgs e)
+        {
+            string x = "";
+            if (RadioCustomer.Checked)
+            {
+                x = "Customer_Name";
+            }
+            else { x = "Product_Name"; }
+            string query = $"SELECT * FROM sale_ledger WHERE {x} LIKE '{SearchBox.Text}%'";
+            DataTable dt = new DataTable();
+
+            General.SearchControl(dt, query, SearchBox.Text, $"@{x}");
+
+            if (dt.Rows.Count > 0)
+            {
+                SaleLedgerGrid.DataSource = dt;
+            }
+            else { LoadData(); }
+        }
+
+        private void SearchBox_TextChanged(object sender, EventArgs e)
+        {
+            if (SearchBox.Text == string.Empty)
+            {
+                LoadData();
+            }
+        }
     }
 }

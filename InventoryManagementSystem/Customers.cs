@@ -22,9 +22,16 @@ namespace InventoryManagementSystem
         {
             Query();
         }
+        DataGridViewButtonColumn btnColumn = new DataGridViewButtonColumn();
+
 
         void LoadData()
         {
+            btnColumn.HeaderText = "Remove";
+            btnColumn.Width = 10;
+            btnColumn.Name = "Remove";
+            btnColumn.Text = "Click";
+
             using (MySqlConnection conn = new MySqlConnection(General.ConString()))
             {
                 conn.Open();
@@ -40,7 +47,9 @@ namespace InventoryManagementSystem
 
                 if (dt.Rows.Count > 0)
                 {
+
                     CustomersDataGridView.DataSource = dt;
+
                 }
             }
         }
@@ -117,6 +126,9 @@ namespace InventoryManagementSystem
             LoadData();
         }
 
+        private void CustomersDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
     }
 }

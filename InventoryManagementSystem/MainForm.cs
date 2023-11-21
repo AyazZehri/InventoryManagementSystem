@@ -42,7 +42,8 @@ namespace InventoryManagementSystem
 
         private void MinimizeAppButton_Click(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Minimized;
+            MainForm main = new MainForm();
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
@@ -83,6 +84,11 @@ namespace InventoryManagementSystem
         private void UsersButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void OrdersButton_Click(object sender, EventArgs e)
+        {
+            loadForm(new Orders());
         }
     }
 }

@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Bunifu.UI.WinForms;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -44,6 +47,27 @@ namespace InventoryManagementSystem
             }
 
             return value;
+        }
+
+        public static void SearchControl(DataTable table, string query, string value, string name)
+        {
+            using (MySqlConnection con = new MySqlConnection(ConString()))
+            {
+                con.Open();
+
+                MySqlCommand cmd = con.CreateCommand();
+
+                cmd.CommandText = query;
+                cmd.Parameters.AddWithValue(value, name);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+
+
+                table.Load(reader);
+
+
+            }
         }
     }
 }

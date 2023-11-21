@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bunifu.UI.WinForms;
@@ -87,7 +88,7 @@ namespace InventoryManagementSystem
                 cmd.Parameters.AddWithValue("Price_Per_Unit", PriceBox.Text);
                 cmd.Parameters.AddWithValue("Total_Amount", total);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Product Successfully Added to Inventory", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Product Successfully Added to Inventory", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
             }
@@ -121,7 +122,9 @@ namespace InventoryManagementSystem
 
                 if (dt.Rows.Count > 0)
                 {
+
                     ItemList.Controls.Clear();
+
                     foreach (DataRow dr in dt.Rows)
                     {
                         ItemCard item = new ItemCard();
@@ -134,8 +137,6 @@ namespace InventoryManagementSystem
                         item.Click += onClickItem;
                         ItemList.Controls.Add(item);
                     }
-
-
 
                     //ProductsGridView.DataSource = dt;
                 }

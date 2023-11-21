@@ -44,6 +44,7 @@
             this.MainPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.CloseButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.ProductsButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.CustomersButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -52,7 +53,6 @@
             this.SaleLedgerButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.SaleButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.DashboardButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuPanel1.SuspendLayout();
             this.bunifuShadowPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -105,7 +105,7 @@
             // 
             // bunifuPanel1
             // 
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.White;
             this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
             this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Black;
@@ -137,7 +137,7 @@
             this.MinimizeAppButton.FadeWhenInactive = false;
             this.MinimizeAppButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
             this.MinimizeAppButton.Image = global::InventoryManagementSystem.Properties.Resources.Minimize;
-            this.MinimizeAppButton.ImageActive = global::InventoryManagementSystem.Properties.Resources.Minimize;
+            //this.MinimizeAppButton.ImageActive = global::InventoryManagementSystem.Properties.Resources.Minimize;
             this.MinimizeAppButton.ImageLocation = null;
             this.MinimizeAppButton.ImageMargin = 0;
             this.MinimizeAppButton.ImageSize = new System.Drawing.Size(29, 29);
@@ -154,7 +154,7 @@
             this.MinimizeAppButton.TabIndex = 3;
             this.MinimizeAppButton.ToolTipText = "";
             this.MinimizeAppButton.WaitOnLoad = false;
-            this.MinimizeAppButton.Zoom = 0;
+            //this.MinimizeAppButton.Zoom = 0;
             this.MinimizeAppButton.ZoomSpeed = 10;
             this.MinimizeAppButton.Click += new System.EventHandler(this.MinimizeAppButton_Click);
             // 
@@ -186,7 +186,7 @@
             this.CloseButton.FadeWhenInactive = false;
             this.CloseButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
             this.CloseButton.Image = global::InventoryManagementSystem.Properties.Resources.Close;
-            this.CloseButton.ImageActive = global::InventoryManagementSystem.Properties.Resources.Close;
+            //this.CloseButton.ImageActive = global::InventoryManagementSystem.Properties.Resources.Close;
             this.CloseButton.ImageLocation = null;
             this.CloseButton.ImageMargin = 0;
             this.CloseButton.ImageSize = new System.Drawing.Size(29, 29);
@@ -203,7 +203,7 @@
             this.CloseButton.TabIndex = 3;
             this.CloseButton.ToolTipText = "";
             this.CloseButton.WaitOnLoad = false;
-            this.CloseButton.Zoom = 0;
+            //this.CloseButton.Zoom = 0;
             this.CloseButton.ZoomSpeed = 10;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
@@ -237,6 +237,16 @@
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::InventoryManagementSystem.Properties.Resources.Inventory1;
+            this.pictureBox1.Location = new System.Drawing.Point(46, 114);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(124, 134);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // bunifuLabel1
             // 
             this.bunifuLabel1.AllowParentOverrides = false;
@@ -244,12 +254,12 @@
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Bebas", 18F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(16, 34);
+            this.bunifuLabel1.Location = new System.Drawing.Point(13, 33);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(187, 59);
+            this.bunifuLabel1.Size = new System.Drawing.Size(198, 59);
             this.bunifuLabel1.TabIndex = 1;
-            this.bunifuLabel1.Text = "Invetory Management\r\nSystem";
+            this.bunifuLabel1.Text = "Inventory Management\r\nSystem";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -611,6 +621,7 @@
             this.OrdersButton.TextMarginLeft = 0;
             this.OrdersButton.TextPadding = new System.Windows.Forms.Padding(0);
             this.OrdersButton.UseDefaultRadiusAndThickness = true;
+            this.OrdersButton.Click += new System.EventHandler(this.OrdersButton_Click);
             // 
             // SaleLedgerButton
             // 
@@ -882,16 +893,6 @@
             this.DashboardButton.UseDefaultRadiusAndThickness = true;
             this.DashboardButton.Click += new System.EventHandler(this.DashboardButton_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::InventoryManagementSystem.Properties.Resources.Trolly;
-            this.pictureBox1.Location = new System.Drawing.Point(46, 114);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 134);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -899,6 +900,7 @@
             this.ClientSize = new System.Drawing.Size(1155, 800);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventory Management System";

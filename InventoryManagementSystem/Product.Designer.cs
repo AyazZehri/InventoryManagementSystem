@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -57,12 +58,12 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.ItemList = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuShadowPanel4 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.bunifuShadowPanel6 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.AddButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.ClearButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.RemoveButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.UpdateButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.QualityBox = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -76,12 +77,11 @@
             this.QuantityBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.NameBox = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.idLabel = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.idLabel = new Bunifu.UI.WinForms.BunifuLabel();
-            this.ClearButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuShadowPanel1.SuspendLayout();
             this.bunifuShadowPanel6.SuspendLayout();
             this.SuspendLayout();
@@ -96,7 +96,7 @@
             this.bunifuShadowPanel1.Controls.Add(this.bunifuShadowPanel4);
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(5, 211);
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(9, 215);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.White;
             this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.White;
@@ -166,7 +166,7 @@
             this.bunifuShadowPanel6.Controls.Add(this.bunifuLabel1);
             this.bunifuShadowPanel6.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel6.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel6.Location = new System.Drawing.Point(5, 6);
+            this.bunifuShadowPanel6.Location = new System.Drawing.Point(9, 10);
             this.bunifuShadowPanel6.Name = "bunifuShadowPanel6";
             this.bunifuShadowPanel6.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(234)))));
             this.bunifuShadowPanel6.PanelColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(234)))));
@@ -269,6 +269,96 @@
             this.AddButton.TextPadding = new System.Windows.Forms.Padding(0);
             this.AddButton.UseDefaultRadiusAndThickness = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // ClearButton
+            // 
+            this.ClearButton.AllowAnimations = true;
+            this.ClearButton.AllowMouseEffects = true;
+            this.ClearButton.AllowToggling = false;
+            this.ClearButton.AnimationSpeed = 200;
+            this.ClearButton.AutoGenerateColors = false;
+            this.ClearButton.AutoRoundBorders = false;
+            this.ClearButton.AutoSizeLeftIcon = true;
+            this.ClearButton.AutoSizeRightIcon = true;
+            this.ClearButton.BackColor = System.Drawing.Color.Transparent;
+            this.ClearButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(147)))), ((int)(((byte)(124)))));
+            this.ClearButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ClearButton.BackgroundImage")));
+            this.ClearButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ClearButton.ButtonText = "Clear";
+            this.ClearButton.ButtonTextMarginLeft = 0;
+            this.ClearButton.ColorContrastOnClick = 45;
+            this.ClearButton.ColorContrastOnHover = 45;
+            this.ClearButton.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.ClearButton.CustomizableEdges = borderEdges2;
+            this.ClearButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.ClearButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.ClearButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ClearButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.ClearButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.ClearButton.Font = new System.Drawing.Font("Bebas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearButton.ForeColor = System.Drawing.Color.White;
+            this.ClearButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ClearButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.ClearButton.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.ClearButton.IconMarginLeft = 11;
+            this.ClearButton.IconPadding = 10;
+            this.ClearButton.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ClearButton.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.ClearButton.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.ClearButton.IconSize = 25;
+            this.ClearButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(147)))), ((int)(((byte)(124)))));
+            this.ClearButton.IdleBorderRadius = 15;
+            this.ClearButton.IdleBorderThickness = 1;
+            this.ClearButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(147)))), ((int)(((byte)(124)))));
+            this.ClearButton.IdleIconLeftImage = null;
+            this.ClearButton.IdleIconRightImage = null;
+            this.ClearButton.IndicateFocus = false;
+            this.ClearButton.Location = new System.Drawing.Point(717, 156);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.ClearButton.OnDisabledState.BorderRadius = 15;
+            this.ClearButton.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ClearButton.OnDisabledState.BorderThickness = 1;
+            this.ClearButton.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.ClearButton.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.ClearButton.OnDisabledState.IconLeftImage = null;
+            this.ClearButton.OnDisabledState.IconRightImage = null;
+            this.ClearButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.ClearButton.onHoverState.BorderRadius = 15;
+            this.ClearButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ClearButton.onHoverState.BorderThickness = 1;
+            this.ClearButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.ClearButton.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.ClearButton.onHoverState.IconLeftImage = null;
+            this.ClearButton.onHoverState.IconRightImage = null;
+            this.ClearButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(147)))), ((int)(((byte)(124)))));
+            this.ClearButton.OnIdleState.BorderRadius = 15;
+            this.ClearButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ClearButton.OnIdleState.BorderThickness = 1;
+            this.ClearButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(147)))), ((int)(((byte)(124)))));
+            this.ClearButton.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.ClearButton.OnIdleState.IconLeftImage = null;
+            this.ClearButton.OnIdleState.IconRightImage = null;
+            this.ClearButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.ClearButton.OnPressedState.BorderRadius = 15;
+            this.ClearButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.ClearButton.OnPressedState.BorderThickness = 1;
+            this.ClearButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.ClearButton.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.ClearButton.OnPressedState.IconLeftImage = null;
+            this.ClearButton.OnPressedState.IconRightImage = null;
+            this.ClearButton.Size = new System.Drawing.Size(142, 39);
+            this.ClearButton.TabIndex = 8;
+            this.ClearButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ClearButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ClearButton.TextMarginLeft = 0;
+            this.ClearButton.TextPadding = new System.Windows.Forms.Padding(0);
+            this.ClearButton.UseDefaultRadiusAndThickness = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // RemoveButton
             // 
@@ -978,6 +1068,38 @@
             this.NameBox.UseSystemPasswordChar = false;
             this.NameBox.WordWrap = true;
             // 
+            // idLabel
+            // 
+            this.idLabel.AllowParentOverrides = false;
+            this.idLabel.AutoEllipsis = false;
+            this.idLabel.CursorType = null;
+            this.idLabel.Font = new System.Drawing.Font("Bebas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idLabel.Location = new System.Drawing.Point(510, 16);
+            this.idLabel.Name = "idLabel";
+            this.idLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.idLabel.Size = new System.Drawing.Size(17, 29);
+            this.idLabel.TabIndex = 0;
+            this.idLabel.TabStop = false;
+            this.idLabel.Text = "10";
+            this.idLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.idLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel8
+            // 
+            this.bunifuLabel8.AllowParentOverrides = false;
+            this.bunifuLabel8.AutoEllipsis = false;
+            this.bunifuLabel8.CursorType = null;
+            this.bunifuLabel8.Font = new System.Drawing.Font("Bebas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel8.Location = new System.Drawing.Point(466, 16);
+            this.bunifuLabel8.Name = "bunifuLabel8";
+            this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel8.Size = new System.Drawing.Size(22, 29);
+            this.bunifuLabel8.TabIndex = 0;
+            this.bunifuLabel8.TabStop = false;
+            this.bunifuLabel8.Text = "ID:";
+            this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // bunifuLabel6
             // 
             this.bunifuLabel6.AllowParentOverrides = false;
@@ -1014,128 +1136,6 @@
             // 
             this.bunifuElipse1.ElipseRadius = 20;
             this.bunifuElipse1.TargetControl = this;
-            // 
-            // bunifuLabel8
-            // 
-            this.bunifuLabel8.AllowParentOverrides = false;
-            this.bunifuLabel8.AutoEllipsis = false;
-            this.bunifuLabel8.CursorType = null;
-            this.bunifuLabel8.Font = new System.Drawing.Font("Bebas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel8.Location = new System.Drawing.Point(466, 16);
-            this.bunifuLabel8.Name = "bunifuLabel8";
-            this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel8.Size = new System.Drawing.Size(22, 29);
-            this.bunifuLabel8.TabIndex = 0;
-            this.bunifuLabel8.TabStop = false;
-            this.bunifuLabel8.Text = "ID:";
-            this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // idLabel
-            // 
-            this.idLabel.AllowParentOverrides = false;
-            this.idLabel.AutoEllipsis = false;
-            this.idLabel.CursorType = null;
-            this.idLabel.Font = new System.Drawing.Font("Bebas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idLabel.Location = new System.Drawing.Point(510, 16);
-            this.idLabel.Name = "idLabel";
-            this.idLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.idLabel.Size = new System.Drawing.Size(17, 29);
-            this.idLabel.TabIndex = 0;
-            this.idLabel.TabStop = false;
-            this.idLabel.Text = "10";
-            this.idLabel.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.idLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // ClearButton
-            // 
-            this.ClearButton.AllowAnimations = true;
-            this.ClearButton.AllowMouseEffects = true;
-            this.ClearButton.AllowToggling = false;
-            this.ClearButton.AnimationSpeed = 200;
-            this.ClearButton.AutoGenerateColors = false;
-            this.ClearButton.AutoRoundBorders = false;
-            this.ClearButton.AutoSizeLeftIcon = true;
-            this.ClearButton.AutoSizeRightIcon = true;
-            this.ClearButton.BackColor = System.Drawing.Color.Transparent;
-            this.ClearButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(147)))), ((int)(((byte)(124)))));
-            this.ClearButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ClearButton.BackgroundImage")));
-            this.ClearButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.ClearButton.ButtonText = "Clear";
-            this.ClearButton.ButtonTextMarginLeft = 0;
-            this.ClearButton.ColorContrastOnClick = 45;
-            this.ClearButton.ColorContrastOnHover = 45;
-            this.ClearButton.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.ClearButton.CustomizableEdges = borderEdges2;
-            this.ClearButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.ClearButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.ClearButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.ClearButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.ClearButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.ClearButton.Font = new System.Drawing.Font("Bebas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClearButton.ForeColor = System.Drawing.Color.White;
-            this.ClearButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ClearButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.ClearButton.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.ClearButton.IconMarginLeft = 11;
-            this.ClearButton.IconPadding = 10;
-            this.ClearButton.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ClearButton.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.ClearButton.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.ClearButton.IconSize = 25;
-            this.ClearButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(147)))), ((int)(((byte)(124)))));
-            this.ClearButton.IdleBorderRadius = 15;
-            this.ClearButton.IdleBorderThickness = 1;
-            this.ClearButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(147)))), ((int)(((byte)(124)))));
-            this.ClearButton.IdleIconLeftImage = null;
-            this.ClearButton.IdleIconRightImage = null;
-            this.ClearButton.IndicateFocus = false;
-            this.ClearButton.Location = new System.Drawing.Point(717, 156);
-            this.ClearButton.Name = "ClearButton";
-            this.ClearButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.ClearButton.OnDisabledState.BorderRadius = 15;
-            this.ClearButton.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.ClearButton.OnDisabledState.BorderThickness = 1;
-            this.ClearButton.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.ClearButton.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.ClearButton.OnDisabledState.IconLeftImage = null;
-            this.ClearButton.OnDisabledState.IconRightImage = null;
-            this.ClearButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.ClearButton.onHoverState.BorderRadius = 15;
-            this.ClearButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.ClearButton.onHoverState.BorderThickness = 1;
-            this.ClearButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.ClearButton.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.ClearButton.onHoverState.IconLeftImage = null;
-            this.ClearButton.onHoverState.IconRightImage = null;
-            this.ClearButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(147)))), ((int)(((byte)(124)))));
-            this.ClearButton.OnIdleState.BorderRadius = 15;
-            this.ClearButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.ClearButton.OnIdleState.BorderThickness = 1;
-            this.ClearButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(147)))), ((int)(((byte)(124)))));
-            this.ClearButton.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.ClearButton.OnIdleState.IconLeftImage = null;
-            this.ClearButton.OnIdleState.IconRightImage = null;
-            this.ClearButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.ClearButton.OnPressedState.BorderRadius = 15;
-            this.ClearButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.ClearButton.OnPressedState.BorderThickness = 1;
-            this.ClearButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.ClearButton.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.ClearButton.OnPressedState.IconLeftImage = null;
-            this.ClearButton.OnPressedState.IconRightImage = null;
-            this.ClearButton.Size = new System.Drawing.Size(142, 39);
-            this.ClearButton.TabIndex = 8;
-            this.ClearButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ClearButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ClearButton.TextMarginLeft = 0;
-            this.ClearButton.TextPadding = new System.Windows.Forms.Padding(0);
-            this.ClearButton.UseDefaultRadiusAndThickness = true;
-            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // Product
             // 
