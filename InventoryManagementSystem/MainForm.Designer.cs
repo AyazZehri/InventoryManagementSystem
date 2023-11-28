@@ -137,7 +137,7 @@
             this.MinimizeAppButton.FadeWhenInactive = false;
             this.MinimizeAppButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
             this.MinimizeAppButton.Image = global::InventoryManagementSystem.Properties.Resources.Minimize;
-            //this.MinimizeAppButton.ImageActive = global::InventoryManagementSystem.Properties.Resources.Minimize;
+            this.MinimizeAppButton.ImageActive = global::InventoryManagementSystem.Properties.Resources.Minimize;
             this.MinimizeAppButton.ImageLocation = null;
             this.MinimizeAppButton.ImageMargin = 0;
             this.MinimizeAppButton.ImageSize = new System.Drawing.Size(29, 29);
@@ -154,7 +154,7 @@
             this.MinimizeAppButton.TabIndex = 3;
             this.MinimizeAppButton.ToolTipText = "";
             this.MinimizeAppButton.WaitOnLoad = false;
-            //this.MinimizeAppButton.Zoom = 0;
+            this.MinimizeAppButton.Zoom = 0;
             this.MinimizeAppButton.ZoomSpeed = 10;
             this.MinimizeAppButton.Click += new System.EventHandler(this.MinimizeAppButton_Click);
             // 
@@ -186,7 +186,7 @@
             this.CloseButton.FadeWhenInactive = false;
             this.CloseButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
             this.CloseButton.Image = global::InventoryManagementSystem.Properties.Resources.Close;
-            //this.CloseButton.ImageActive = global::InventoryManagementSystem.Properties.Resources.Close;
+            this.CloseButton.ImageActive = global::InventoryManagementSystem.Properties.Resources.Close;
             this.CloseButton.ImageLocation = null;
             this.CloseButton.ImageMargin = 0;
             this.CloseButton.ImageSize = new System.Drawing.Size(29, 29);
@@ -203,7 +203,7 @@
             this.CloseButton.TabIndex = 3;
             this.CloseButton.ToolTipText = "";
             this.CloseButton.WaitOnLoad = false;
-            //this.CloseButton.Zoom = 0;
+            this.CloseButton.Zoom = 0;
             this.CloseButton.ZoomSpeed = 10;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 

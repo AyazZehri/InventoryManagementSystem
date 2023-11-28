@@ -20,7 +20,7 @@ namespace InventoryManagementSystem
         }
 
         int rate, quantity, total, dues, paid, net, maxQuantity;
-        bool hasRows = false;
+        //bool hasRows = false;
 
 
         private void LoadDataCustomers()
@@ -44,6 +44,10 @@ namespace InventoryManagementSystem
                 if (dt.Rows.Count > 0)
                 {
                     CustomersGridView.DataSource = dt;
+                }
+                else
+                {
+                    MessageBox.Show("No Data Found");
                 }
 
 
@@ -82,7 +86,11 @@ namespace InventoryManagementSystem
                     ItemList.Controls.Add(item);
                 }
             }
-            else { LoadDataProducts(); }
+            else
+            {
+                MessageBox.Show($"No Data Like {CustomerSearchBox.Text} found");
+                LoadDataProducts();
+            }
 
 
         }
@@ -157,14 +165,15 @@ namespace InventoryManagementSystem
                 maxQuantity = Convert.ToInt32(clickedItem.Quantity);
                 RateBox.Text = clickedItem.Price;
 
+                QuantityBox.Maximum = maxQuantity;
+
 
             }
         }
 
         private void CustomersGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            CustomerIDLabel.Text = CustomersGridView.SelectedRows[0].Cells[0].Value.ToString();
-            CustomerNameBox.Text = CustomersGridView.SelectedRows[0].Cells[1].Value.ToString();
+
 
         }
 
@@ -174,28 +183,37 @@ namespace InventoryManagementSystem
             LoadDataProducts();
         }
 
-        private void ProductsGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void AddButton_Click(object sender, EventArgs e)
         {
             Query();
             OrderQuery();
         }
 
+        bool maxValueZeroHandle = false;
         private void QuantityBox_ValueChanged(object sender, EventArgs e)
         {
-            calculate();
+            if (maxQuantity == 0)
+            {
+                if (!maxValueZeroHandle)
+                {
+                    maxValueZeroHandle = true;
+                    QuantityBox.Value = 0;
+                    MessageBox.Show($"Please Select any Product");
+                }
 
+            }
+            else
+            {
+                maxValueZeroHandle = false;
+
+                calculate();
+                if (quantity >= QuantityBox.Maximum - 1)
+                    MessageBox.Show($"Maximum Quantity of {ProductNameBox.Text} is {maxQuantity}");
+            }
+
+            maxValueZeroHandle = false;
         }
 
-        private void CustomerSearchBox_OnIconLeftClick(object sender, EventArgs e)
-        {
-
-
-        }
 
         private void CustomerSearchBox_OnIconRightClick(object sender, EventArgs e)
         {
@@ -227,6 +245,14 @@ namespace InventoryManagementSystem
             }
         }
 
+        private void CustomersGridView_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            CustomerIDLabel.Text = CustomersGridView.SelectedRows[0].Cells[0].Value.ToString();
+            CustomerNameBox.Text = CustomersGridView.SelectedRows[0].Cells[1].Value.ToString();
+        }
+
+       
+
         private void PaidAmountBox_TextChanged(object sender, EventArgs e)
         {
             calculate();
@@ -235,8 +261,11 @@ namespace InventoryManagementSystem
         void calculate()
         {
             rate = General.ConvertToInt(RateBox.Text);
-            if (quantity <= maxQuantity - 1)
-            { quantity = General.ConvertToInt(QuantityBox.Text); }
+            /*if (quantity <= maxQuantity - 1)
+            { quantity = General.ConvertToInt(QuantityBox.Text); }*/
+            QuantityBox.Maximum = maxQuantity;
+
+            quantity = General.ConvertToInt(QuantityBox.Text);
 
             paid = General.ConvertToInt(PaidAmountBox.Text);
             /* dues = General.ConvertToInt(DuesBox.Text);*/
@@ -247,12 +276,12 @@ namespace InventoryManagementSystem
 
             net = total - dues;
 
-            if (quantity > maxQuantity - 1)
+            /*if (quantity > maxQuantity - 1)
             {
                 quantity = maxQuantity;
                 MessageBox.Show("Max Quantity is " + maxQuantity);
                 QuantityBox.Text = maxQuantity.ToString();
-            }
+            }*/
             TotalAmountBox.Text = total.ToString();
 
             DuesBox.Text = dues.ToString();

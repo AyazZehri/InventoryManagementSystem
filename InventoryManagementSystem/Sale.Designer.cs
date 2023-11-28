@@ -233,8 +233,7 @@
             this.CustomersGridView.TabIndex = 0;
             this.CustomersGridView.TabStop = false;
             this.CustomersGridView.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Crimson;
-            this.CustomersGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustomersGridView_CellClick);
-            this.CustomersGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsGridView_CellDoubleClick);
+            this.CustomersGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustomersGridView_CellClick_1);
             // 
             // bunifuShadowPanel1
             // 
@@ -749,6 +748,7 @@
             this.NetAmountBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.NetAmountBox.DefaultFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NetAmountBox.DefaultText = "";
+            this.NetAmountBox.Enabled = false;
             this.NetAmountBox.FillColor = System.Drawing.Color.White;
             this.NetAmountBox.HideSelection = true;
             this.NetAmountBox.IconLeft = null;
@@ -823,6 +823,7 @@
             this.QualityBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.QualityBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
             this.QualityBox.DefaultText = "";
+            this.QualityBox.Enabled = false;
             this.QualityBox.FillColor = System.Drawing.Color.White;
             this.QualityBox.HideSelection = true;
             this.QualityBox.IconLeft = null;
@@ -897,6 +898,7 @@
             this.RateBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.RateBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
             this.RateBox.DefaultText = "";
+            this.RateBox.Enabled = false;
             this.RateBox.FillColor = System.Drawing.Color.White;
             this.RateBox.HideSelection = true;
             this.RateBox.IconLeft = null;
@@ -971,6 +973,7 @@
             this.ProductNameBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ProductNameBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
             this.ProductNameBox.DefaultText = "";
+            this.ProductNameBox.Enabled = false;
             this.ProductNameBox.FillColor = System.Drawing.Color.White;
             this.ProductNameBox.HideSelection = true;
             this.ProductNameBox.IconLeft = null;
@@ -1045,6 +1048,7 @@
             this.TotalAmountBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TotalAmountBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
             this.TotalAmountBox.DefaultText = "";
+            this.TotalAmountBox.Enabled = false;
             this.TotalAmountBox.FillColor = System.Drawing.Color.White;
             this.TotalAmountBox.HideSelection = true;
             this.TotalAmountBox.IconLeft = null;
@@ -1194,6 +1198,7 @@
             this.TypeBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.TypeBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
             this.TypeBox.DefaultText = "";
+            this.TypeBox.Enabled = false;
             this.TypeBox.FillColor = System.Drawing.Color.White;
             this.TypeBox.HideSelection = true;
             this.TypeBox.IconLeft = null;
@@ -1268,6 +1273,7 @@
             this.DuesBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.DuesBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
             this.DuesBox.DefaultText = "";
+            this.DuesBox.Enabled = false;
             this.DuesBox.FillColor = System.Drawing.Color.White;
             this.DuesBox.HideSelection = true;
             this.DuesBox.IconLeft = null;
@@ -1342,6 +1348,7 @@
             this.CustomerNameBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.CustomerNameBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
             this.CustomerNameBox.DefaultText = "";
+            this.CustomerNameBox.Enabled = false;
             this.CustomerNameBox.FillColor = System.Drawing.Color.White;
             this.CustomerNameBox.HideSelection = true;
             this.CustomerNameBox.IconLeft = null;
@@ -1463,7 +1470,7 @@
             this.CustomerSearchBox.Padding = new System.Windows.Forms.Padding(3);
             this.CustomerSearchBox.PasswordChar = '\0';
             this.CustomerSearchBox.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.CustomerSearchBox.PlaceholderText = "Enter text";
+            this.CustomerSearchBox.PlaceholderText = "Enter Customer Name to search";
             this.CustomerSearchBox.ReadOnly = false;
             this.CustomerSearchBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.CustomerSearchBox.SelectedText = "";
@@ -1478,11 +1485,10 @@
             this.CustomerSearchBox.TextMarginBottom = 0;
             this.CustomerSearchBox.TextMarginLeft = 3;
             this.CustomerSearchBox.TextMarginTop = 0;
-            this.CustomerSearchBox.TextPlaceholder = "Enter text";
+            this.CustomerSearchBox.TextPlaceholder = "Enter Customer Name to search";
             this.CustomerSearchBox.UseSystemPasswordChar = false;
             this.CustomerSearchBox.WordWrap = true;
             this.CustomerSearchBox.TextChanged += new System.EventHandler(this.CustomerSearchBox_TextChanged);
-            this.CustomerSearchBox.OnIconLeftClick += new System.EventHandler(this.CustomerSearchBox_OnIconLeftClick);
             this.CustomerSearchBox.OnIconRightClick += new System.EventHandler(this.CustomerSearchBox_OnIconRightClick);
             // 
             // ProductsSearchBox

@@ -23,11 +23,6 @@ namespace InventoryManagementSystem
 
         int price, total, quantity, id;
 
-        private void bunifuShadowPanel1_ControlAdded(object sender, ControlEventArgs e)
-        {
-
-        }
-
         private void bunifuShadowPanel6_ControlAdded(object sender, ControlEventArgs e)
         {
 
@@ -88,7 +83,7 @@ namespace InventoryManagementSystem
                 cmd.Parameters.AddWithValue("Price_Per_Unit", PriceBox.Text);
                 cmd.Parameters.AddWithValue("Total_Amount", total);
                 cmd.ExecuteNonQuery();
-                //MessageBox.Show("Product Successfully Added to Inventory", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Product Successfully Added to Inventory", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
             }
@@ -144,6 +139,7 @@ namespace InventoryManagementSystem
                 clearBox();
                 id = (GetLastID() + 1);
                 idLabel.Text = id.ToString();
+                con.Close();
             }
             catch (Exception ex)
             {
@@ -282,6 +278,7 @@ namespace InventoryManagementSystem
 
         void clearBox()
         {
+
             BunifuTextBox[] boxes = { NameBox, TypeBox, PriceBox, QualityBox, QuantityBox, TotalBox };
 
             foreach (BunifuTextBox box in boxes)

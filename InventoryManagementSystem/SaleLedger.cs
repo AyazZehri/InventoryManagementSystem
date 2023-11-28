@@ -44,6 +44,18 @@ namespace InventoryManagementSystem
                     if (dt.Rows.Count > 0)
                     {
                         SaleLedgerGrid.DataSource = dt;
+                        DataGridViewImageColumn button = new DataGridViewImageColumn();
+                        button.Name = "Delete";
+                        button.HeaderText = "Delete";
+                        button.Width = 25;
+                     
+                        button.ImageLayout = DataGridViewImageCellLayout.Zoom;
+
+
+                        if (!SaleLedgerGrid.Columns.Contains("Delete"))
+                        {
+                            SaleLedgerGrid.Columns.Add(button);
+                        }
                     }
                 }
             }
@@ -79,6 +91,52 @@ namespace InventoryManagementSystem
             if (SearchBox.Text == string.Empty)
             {
                 LoadData();
+            }
+        }
+
+        private void Remove(string Ref_No)
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(General.ConString()))
+                {
+                    con.Open();
+                   
+                    string removeQuery = "DELETE FROM sale_Ledger WHERE Ref_No = @Ref_No";
+                    MySqlCommand cmd = new MySqlCommand(removeQuery, con);
+
+                    
+                    cmd.Parameters.AddWithValue("@Ref_No", Ref_No);
+                   
+
+                    cmd.ExecuteNonQuery();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Remove From Ledger");
+            }
+        }
+        private void SaleLedgerGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string Ref_No = SaleLedgerGrid.SelectedRows[0].Cells[1].Value.ToString();
+            if (e.ColumnIndex == SaleLedgerGrid.Columns["Delete"].Index && e.RowIndex >= 0)
+            {
+                if (Convert.ToInt16(Ref_No) == 1000)
+                { MessageBox.Show("Cannot Remove Last Entry"); return;}
+                Remove(Ref_No);
+                LoadData();
+                //int rowIndexToDelete = e.RowIndex;
+                //OrdersDataGrid.Rows.RemoveAt(rowIndexToDelete);
+            }
+        }
+
+        private void SaleLedgerGrid_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            foreach (DataGridViewRow row in SaleLedgerGrid.Rows)
+            {
+                row.Cells["Delete"].Value = Properties.Resources.Close;
             }
         }
     }

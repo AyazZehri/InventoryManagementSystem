@@ -42,10 +42,10 @@
             this.bunifuLabel14 = new Bunifu.UI.WinForms.BunifuLabel();
             this.SearchBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.RadioCustomer = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.RadioProduct = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.RadioCustomer = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.SaleLedgerGrid)).BeginInit();
             this.bunifuShadowPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -117,6 +117,8 @@
             this.SaleLedgerGrid.Size = new System.Drawing.Size(876, 647);
             this.SaleLedgerGrid.TabIndex = 0;
             this.SaleLedgerGrid.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Crimson;
+            this.SaleLedgerGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SaleLedgerGrid_CellClick);
+            this.SaleLedgerGrid.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.SaleLedgerGrid_RowPrePaint);
             // 
             // bunifuLabel14
             // 
@@ -237,37 +239,23 @@
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 8;
             // 
-            // bunifuLabel1
+            // RadioProduct
             // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = null;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Bebas", 11.25F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(27, 27);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(95, 18);
-            this.bunifuLabel1.TabIndex = 1;
-            this.bunifuLabel1.TabStop = false;
-            this.bunifuLabel1.Text = "Search Customer";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel2
-            // 
-            this.bunifuLabel2.AllowParentOverrides = false;
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.CursorType = null;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Bebas", 11.25F);
-            this.bunifuLabel2.Location = new System.Drawing.Point(162, 27);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(87, 18);
-            this.bunifuLabel2.TabIndex = 1;
-            this.bunifuLabel2.TabStop = false;
-            this.bunifuLabel2.Text = "Search Product";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.RadioProduct.AllowBindingControlLocation = false;
+            this.RadioProduct.BackColor = System.Drawing.Color.Transparent;
+            this.RadioProduct.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
+            this.RadioProduct.BorderThickness = 1;
+            this.RadioProduct.Checked = false;
+            this.RadioProduct.Location = new System.Drawing.Point(255, 27);
+            this.RadioProduct.Name = "RadioProduct";
+            this.RadioProduct.OutlineColor = System.Drawing.Color.DodgerBlue;
+            this.RadioProduct.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.RadioProduct.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
+            this.RadioProduct.RadioColor = System.Drawing.Color.DodgerBlue;
+            this.RadioProduct.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.RadioProduct.Size = new System.Drawing.Size(21, 21);
+            this.RadioProduct.TabIndex = 8;
+            this.RadioProduct.Text = null;
             // 
             // RadioCustomer
             // 
@@ -287,23 +275,37 @@
             this.RadioCustomer.TabIndex = 8;
             this.RadioCustomer.Text = null;
             // 
-            // RadioProduct
+            // bunifuLabel2
             // 
-            this.RadioProduct.AllowBindingControlLocation = false;
-            this.RadioProduct.BackColor = System.Drawing.Color.Transparent;
-            this.RadioProduct.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
-            this.RadioProduct.BorderThickness = 1;
-            this.RadioProduct.Checked = false;
-            this.RadioProduct.Location = new System.Drawing.Point(255, 27);
-            this.RadioProduct.Name = "RadioProduct";
-            this.RadioProduct.OutlineColor = System.Drawing.Color.DodgerBlue;
-            this.RadioProduct.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.RadioProduct.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
-            this.RadioProduct.RadioColor = System.Drawing.Color.DodgerBlue;
-            this.RadioProduct.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.RadioProduct.Size = new System.Drawing.Size(21, 21);
-            this.RadioProduct.TabIndex = 8;
-            this.RadioProduct.Text = null;
+            this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.CursorType = null;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Bebas", 11.25F);
+            this.bunifuLabel2.Location = new System.Drawing.Point(162, 27);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(87, 18);
+            this.bunifuLabel2.TabIndex = 1;
+            this.bunifuLabel2.TabStop = false;
+            this.bunifuLabel2.Text = "Search Product";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.CursorType = null;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Bebas", 11.25F);
+            this.bunifuLabel1.Location = new System.Drawing.Point(27, 27);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(95, 18);
+            this.bunifuLabel1.TabIndex = 1;
+            this.bunifuLabel1.TabStop = false;
+            this.bunifuLabel1.Text = "Search Customer";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // SaleLedger
             // 

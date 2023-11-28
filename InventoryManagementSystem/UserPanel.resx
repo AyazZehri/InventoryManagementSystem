@@ -121,24 +121,6 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="SearchBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQsAAAAoCAYAAADpGt9+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALRSURBVHhe7d2/btNQFMdxjx07MvIIHTvyBKhjHwGxMSLx
-        AGxsHZA6MDEgsSExkTg3NVEUpbKiiAblr6ooqkKUhAisNKrCOc6piiGiLrAk/n6kO6T2dafz0/G9ie0B
-        wH+Vy+UOisXim5OTk1Md+Xx+yWAwNm9c17DWs9T1oYwdK/O/JxfZdc49931/EYbhZDAYLMfjcTwAbKbr
-        GtZ6rtVq00KhEEl4vJR6v2elfzeSOg9ljFutVnR1dWX/BsC20fru9XoLqfephMZji4B0ZNKTarU6WiwW
-        djkA205Do16vj4IgOLYo+DMNCp1g8wFkTLvdjiQwXlskrKe3HtpR2BwAGdVoNKbOuacWDUm6uKH3LKxP
-        ANAcKJVKXyQX9iwibuhqqC5y2LkAMm44HOo26weLiBXdZ9XtE7oKAD+TsJhJPty3qIjD4lD3W+04AMSa
-        zWbk+/4zi4r4FuTdxcWFHQaAFf3yluTDqUVFvAvyaTqlsQCQFEXR0jk3tKjwPP2gfwSAX+nvSSwqPE8/
-        AMA6hAWAVAgLAKkQFgBSISwApEJYAEiFsACQCmEBIBXCAkAqhAWAVAgLAKkQFgBSSYRFoVCYzudzOwQA
-        NxJhUSwW27PZzA4BwIo2EdpMWFTED7/5OBrxUG8ASdpEaDNhURE/Vu/R2dnZNzsOALFOp6NvKnthUbF6
-        DYBzjrAAkFAul8eSD/sWFSv6yG999DcAqN9uQa5JeuyVSqWJnQcg48IwnEguHFhEJAVBcCT3KF/tXAAZ
-        1e/3L+Vu461Fw3oSGP5gMLi0OQAyRp/0LzlQk65ix2JhPT1BA6Pb7X63uQAyQhsF6Sg+Sw7sWiTcTgLj
-        uFKpjPUlIwC2my5m6hqF1P37WzuKdWTSA30bkW6fnJ+fxy8cAbAdtJ77/f5SmwLd9ZB6X7+YeRdykX3n
-        3JG+jEi/J85gMDZ/aD1LSLzSpsBKHQD+lef9AKcZD9984hMgAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="AddButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAI4AAAAnCAYAAADZ7nAuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -191,7 +173,26 @@
         ebCF5Hqxp1kM6RNYxRu1gUWqDgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="PhoneBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ConfirmBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAbsAAAAlCAYAAADbckeZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJDSURBVHhe7duxalNRGMDxO3Z0dHT0EfoIvoTgIjg66uYD
+        OIiDe+fOrqbJvUlLhjqUlkJIQEoINWqEa4wllOs56XEolc69p78ffNM9yfrnyz0pAOBe6nQ6W2GelWX5
+        od/vf97b22uMMcaYuzixU1VV7YRuvQjzIKXsduHgdvjgl5OTk/rs7KxZLBYNANxVsVPT6bQ5PT1dhn59
+        DR17kpL2f2GTez0cDhfL5TJ9BQC0x8XFRXN4eLgYDAbvUtquixtdDF06DwCtdXR09KPX6z1NibsSQrdV
+        VdVstVqlYwDQXuv1Or7L+xb69jClbhO7l6PR6E86AwCtF++dxIuWKXVFEba63dlslh4DQPvFiyvxpmZK
+        3SZ2k7qu02MAaL/4U2a32/2dUlcU8X8KAJCb2LeUOrEDIE9iB0D2xA6A7IkdANkTOwCyJ3YAZE/sAMie
+        2AGQPbEDIHtiB0D2xA6A7IkdANkTOwCyJ3YAZE/sAMie2AGQPbEDIHtiB0D2rsWuLMv5arVKjwCg/S4v
+        L5tut7tOqSuKfr//aT6fp8cA0H51XTdVVU1S6oqi0+m8Go/H6/QcAFpvOp3G2O2k1G1i92gwGCziygcA
+        ORgOh4vQt+2Uuiu9Xu/58fHxz3QGAFprPB7XYat7mxJ3XXx3NxqNftnwAGiryWSy2t/fH4Stbivl7aay
+        LN8cHBx8n81mm5d7AHDXLZfL5vz8fPPTZVjc3t8aun/Cocdh/duNt1jifxSMMcaYuzxhUZuGyH288Y4O
+        AO6HovgLJYza/yRVcNoAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="bunifuLabel3.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Sans Serif Collection'; font-size: 8.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="PassBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAbsAAAAlCAYAAADbckeZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJDSURBVHhe7duxalNRGMDxO3Z0dHT0EfoIvoTgIjg66uYD
@@ -210,7 +211,7 @@
   <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Sans Serif Collection'; font-size: 8.25pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
-  <data name="NameBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="UsernameBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAbsAAAAlCAYAAADbckeZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJDSURBVHhe7duxalNRGMDxO3Z0dHT0EfoIvoTgIjg66uYD

@@ -171,6 +171,12 @@
     <Compile Include="ItemSalePanel.Designer.cs">
       <DependentUpon>ItemSalePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +209,12 @@
     <Compile Include="SaleLedger.Designer.cs">
       <DependentUpon>SaleLedger.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPanel.Designer.cs">
+      <DependentUpon>UserPanel.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Customers.resx">
       <DependentUpon>Customers.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ItemSalePanel.resx">
       <DependentUpon>ItemSalePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -237,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SaleLedger.resx">
       <DependentUpon>SaleLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanel.resx">
+      <DependentUpon>UserPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -278,6 +296,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Inventory.ico" />
+    <None Include="Resources\showpass.png" />
+    <None Include="Resources\uncheck.png" />
+    <None Include="Resources\check1.png" />
+    <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

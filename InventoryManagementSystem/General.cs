@@ -63,7 +63,6 @@ namespace InventoryManagementSystem
                 MySqlDataReader reader = cmd.ExecuteReader();
 
 
-
                 table.Load(reader);
 
 

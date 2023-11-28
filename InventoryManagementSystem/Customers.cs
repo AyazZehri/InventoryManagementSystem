@@ -20,18 +20,14 @@ namespace InventoryManagementSystem
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+            if(NameBox.Text == string.Empty && PhoneBox.Text == string.Empty) { MessageBox.Show("Please Fill the Boxes to Add Data"); return; }
             Query();
         }
-        DataGridViewButtonColumn btnColumn = new DataGridViewButtonColumn();
+        //DataGridViewButtonColumn btnColumn = new DataGridViewButtonColumn();
 
 
         void LoadData()
         {
-            btnColumn.HeaderText = "Remove";
-            btnColumn.Width = 10;
-            btnColumn.Name = "Remove";
-            btnColumn.Text = "Click";
-
             using (MySqlConnection conn = new MySqlConnection(General.ConString()))
             {
                 conn.Open();
@@ -47,9 +43,7 @@ namespace InventoryManagementSystem
 
                 if (dt.Rows.Count > 0)
                 {
-
                     CustomersDataGridView.DataSource = dt;
-
                 }
             }
         }
@@ -129,6 +123,88 @@ namespace InventoryManagementSystem
         private void CustomersDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(General.ConString()))
+                {
+                    con.Open();
+
+                    string query = "UPDATE Customers SET Name = @Name, Phone = @Phone WHERE CustomerID = @CustomerID";
+
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+
+                    cmd.Parameters.AddWithValue("@CustomerID", CustomersDataGridView.SelectedRows[0].Cells[0].Value.ToString());
+                    cmd.Parameters.AddWithValue("@Name", NameBox.Text);
+                    cmd.Parameters.AddWithValue("@Phone", PhoneBox.Text);
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Data Updated Successfully", "Update ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                LoadData();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
+
+        private void CustomersDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            NameBox.Text = CustomersDataGridView.SelectedRows[0].Cells[1].Value.ToString();
+            PhoneBox.Text = CustomersDataGridView.SelectedRows[0].Cells[2].Value.ToString();
+        }
+
+        private void RemoveButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(General.ConString()))
+                {
+                    con.Open();
+
+                    string query = "DELETE FROM Customers WHERE CustomerID = @CustomerID";
+
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+
+                    cmd.Parameters.AddWithValue("@CustomerID", CustomersDataGridView.SelectedRows[0].Cells[0].Value.ToString());
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show($"Customer '{CustomersDataGridView.SelectedRows[0].Cells[1].Value}' Data Removed Successfully", "Remove ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                LoadData();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            NameBox.Clear();
+            PhoneBox.Clear();
+        }
+
+        private void SearchBox_OnIconRightClick(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            string query = "Select * FROM Customers WHERE Name LIKE " + "'" + SearchBox.Text + "%'";
+            General.SearchControl(dt, query, SearchBox.Text, "@Name");
+            if (dt.Rows.Count > 0)
+            {
+                CustomersDataGridView.DataSource = dt;
+            }
+            else { LoadData(); }
+        }
+
+        private void SearchBox_TextChanged(object sender, EventArgs e)
+        {
+            if (SearchBox.Text == string.Empty)
+                LoadData();
         }
     }
 }

@@ -83,12 +83,17 @@ namespace InventoryManagementSystem
 
         private void UsersButton_Click(object sender, EventArgs e)
         {
-
+            loadForm(new UserPanel());
         }
 
         private void OrdersButton_Click(object sender, EventArgs e)
         {
             loadForm(new Orders());
+        }
+
+        private void abcd_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
