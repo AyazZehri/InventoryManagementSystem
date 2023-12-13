@@ -265,6 +265,8 @@
             this.Margin = new System.Windows.Forms.Padding(8, 3, 3, 8);
             this.Name = "ItemCard";
             this.Size = new System.Drawing.Size(175, 165);
+            this.Load += new System.EventHandler(this.ItemCard_Load);
+            this.Click += new System.EventHandler(this.ItemCard_Click);
             this.MouseEnter += new System.EventHandler(this.ItemCard_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.ItemCard_MouseLeave);
             this.MouseHover += new System.EventHandler(this.ItemCard_MouseHover);

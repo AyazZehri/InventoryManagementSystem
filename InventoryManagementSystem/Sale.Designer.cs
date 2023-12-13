@@ -84,7 +84,7 @@
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.ItemList = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuShadowPanel6 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.PrintBtn = new Bunifu.UI.WinForms.BunifuImageButton();
             this.QuantityBox = new System.Windows.Forms.NumericUpDown();
             this.DatePicker = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.AddButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -115,10 +115,10 @@
             this.CustomerNameBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.CustomerSearchBox = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.ProductsSearchBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel14 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel15 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.CustomerSearchBox = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.ProductsSearchBox = new Bunifu.UI.WinForms.BunifuTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersGridView)).BeginInit();
             this.bunifuShadowPanel1.SuspendLayout();
             this.bunifuShadowPanel6.SuspendLayout();
@@ -271,7 +271,7 @@
             this.bunifuShadowPanel6.BorderColor = System.Drawing.Color.Gray;
             this.bunifuShadowPanel6.BorderRadius = 10;
             this.bunifuShadowPanel6.BorderThickness = 1;
-            this.bunifuShadowPanel6.Controls.Add(this.bunifuImageButton1);
+            this.bunifuShadowPanel6.Controls.Add(this.PrintBtn);
             this.bunifuShadowPanel6.Controls.Add(this.QuantityBox);
             this.bunifuShadowPanel6.Controls.Add(this.DatePicker);
             this.bunifuShadowPanel6.Controls.Add(this.AddButton);
@@ -315,39 +315,40 @@
             this.bunifuShadowPanel6.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel6.TabIndex = 5;
             // 
-            // bunifuImageButton1
+            // PrintBtn
             // 
-            this.bunifuImageButton1.ActiveImage = null;
-            this.bunifuImageButton1.AllowAnimations = true;
-            this.bunifuImageButton1.AllowBuffering = false;
-            this.bunifuImageButton1.AllowToggling = false;
-            this.bunifuImageButton1.AllowZooming = true;
-            this.bunifuImageButton1.AllowZoomingOnFocus = false;
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuImageButton1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.ErrorImage")));
-            this.bunifuImageButton1.FadeWhenInactive = false;
-            this.bunifuImageButton1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.bunifuImageButton1.Image = global::InventoryManagementSystem.Properties.Resources.Print;
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.ImageLocation = null;
-            this.bunifuImageButton1.ImageMargin = 0;
-            this.bunifuImageButton1.ImageSize = new System.Drawing.Size(69, 69);
-            this.bunifuImageButton1.ImageZoomSize = new System.Drawing.Size(70, 70);
-            this.bunifuImageButton1.InitialImage = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.InitialImage")));
-            this.bunifuImageButton1.Location = new System.Drawing.Point(736, 141);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Rotation = 0;
-            this.bunifuImageButton1.ShowActiveImage = true;
-            this.bunifuImageButton1.ShowCursorChanges = true;
-            this.bunifuImageButton1.ShowImageBorders = true;
-            this.bunifuImageButton1.ShowSizeMarkers = false;
-            this.bunifuImageButton1.Size = new System.Drawing.Size(70, 70);
-            this.bunifuImageButton1.TabIndex = 31;
-            this.bunifuImageButton1.ToolTipText = "";
-            this.bunifuImageButton1.WaitOnLoad = false;
-            this.bunifuImageButton1.Zoom = 0;
-            this.bunifuImageButton1.ZoomSpeed = 10;
+            this.PrintBtn.ActiveImage = null;
+            this.PrintBtn.AllowAnimations = true;
+            this.PrintBtn.AllowBuffering = false;
+            this.PrintBtn.AllowToggling = false;
+            this.PrintBtn.AllowZooming = true;
+            this.PrintBtn.AllowZoomingOnFocus = false;
+            this.PrintBtn.BackColor = System.Drawing.Color.Transparent;
+            this.PrintBtn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.PrintBtn.ErrorImage = ((System.Drawing.Image)(resources.GetObject("PrintBtn.ErrorImage")));
+            this.PrintBtn.FadeWhenInactive = false;
+            this.PrintBtn.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.PrintBtn.Image = global::InventoryManagementSystem.Properties.Resources.Print;
+            this.PrintBtn.ImageActive = null;
+            this.PrintBtn.ImageLocation = null;
+            this.PrintBtn.ImageMargin = 0;
+            this.PrintBtn.ImageSize = new System.Drawing.Size(69, 69);
+            this.PrintBtn.ImageZoomSize = new System.Drawing.Size(70, 70);
+            this.PrintBtn.InitialImage = ((System.Drawing.Image)(resources.GetObject("PrintBtn.InitialImage")));
+            this.PrintBtn.Location = new System.Drawing.Point(736, 141);
+            this.PrintBtn.Name = "PrintBtn";
+            this.PrintBtn.Rotation = 0;
+            this.PrintBtn.ShowActiveImage = true;
+            this.PrintBtn.ShowCursorChanges = true;
+            this.PrintBtn.ShowImageBorders = true;
+            this.PrintBtn.ShowSizeMarkers = false;
+            this.PrintBtn.Size = new System.Drawing.Size(70, 70);
+            this.PrintBtn.TabIndex = 31;
+            this.PrintBtn.ToolTipText = "";
+            this.PrintBtn.WaitOnLoad = false;
+            this.PrintBtn.Zoom = 0;
+            this.PrintBtn.ZoomSpeed = 10;
+            this.PrintBtn.Click += new System.EventHandler(this.InvoiceBtn_Click);
             // 
             // QuantityBox
             // 
@@ -770,7 +771,7 @@
             this.NetAmountBox.OnActiveState = stateProperties9;
             stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties10.ForeColor = System.Drawing.Color.Black;
             stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.NetAmountBox.OnDisabledState = stateProperties10;
             stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -821,7 +822,7 @@
             this.QualityBox.BorderThickness = 1;
             this.QualityBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.QualityBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.QualityBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.QualityBox.DefaultFont = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QualityBox.DefaultText = "";
             this.QualityBox.Enabled = false;
             this.QualityBox.FillColor = System.Drawing.Color.White;
@@ -845,7 +846,7 @@
             this.QualityBox.OnActiveState = stateProperties13;
             stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties14.ForeColor = System.Drawing.Color.Black;
             stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.QualityBox.OnDisabledState = stateProperties14;
             stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -868,7 +869,7 @@
             this.QualityBox.SelectionLength = 0;
             this.QualityBox.SelectionStart = 0;
             this.QualityBox.ShortcutsEnabled = true;
-            this.QualityBox.Size = new System.Drawing.Size(152, 37);
+            this.QualityBox.Size = new System.Drawing.Size(152, 40);
             this.QualityBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.QualityBox.TabIndex = 28;
             this.QualityBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -896,7 +897,7 @@
             this.RateBox.BorderThickness = 1;
             this.RateBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.RateBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.RateBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.RateBox.DefaultFont = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RateBox.DefaultText = "";
             this.RateBox.Enabled = false;
             this.RateBox.FillColor = System.Drawing.Color.White;
@@ -920,7 +921,7 @@
             this.RateBox.OnActiveState = stateProperties17;
             stateProperties18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             stateProperties18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties18.ForeColor = System.Drawing.Color.Black;
             stateProperties18.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.RateBox.OnDisabledState = stateProperties18;
             stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -943,7 +944,7 @@
             this.RateBox.SelectionLength = 0;
             this.RateBox.SelectionStart = 0;
             this.RateBox.ShortcutsEnabled = true;
-            this.RateBox.Size = new System.Drawing.Size(152, 37);
+            this.RateBox.Size = new System.Drawing.Size(152, 40);
             this.RateBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.RateBox.TabIndex = 28;
             this.RateBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -971,7 +972,7 @@
             this.ProductNameBox.BorderThickness = 1;
             this.ProductNameBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.ProductNameBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ProductNameBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.ProductNameBox.DefaultFont = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductNameBox.DefaultText = "";
             this.ProductNameBox.Enabled = false;
             this.ProductNameBox.FillColor = System.Drawing.Color.White;
@@ -995,7 +996,7 @@
             this.ProductNameBox.OnActiveState = stateProperties21;
             stateProperties22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             stateProperties22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties22.ForeColor = System.Drawing.Color.Black;
             stateProperties22.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.ProductNameBox.OnDisabledState = stateProperties22;
             stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -1018,7 +1019,7 @@
             this.ProductNameBox.SelectionLength = 0;
             this.ProductNameBox.SelectionStart = 0;
             this.ProductNameBox.ShortcutsEnabled = true;
-            this.ProductNameBox.Size = new System.Drawing.Size(152, 37);
+            this.ProductNameBox.Size = new System.Drawing.Size(152, 40);
             this.ProductNameBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.ProductNameBox.TabIndex = 28;
             this.ProductNameBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1046,7 +1047,7 @@
             this.TotalAmountBox.BorderThickness = 1;
             this.TotalAmountBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.TotalAmountBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TotalAmountBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.TotalAmountBox.DefaultFont = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalAmountBox.DefaultText = "";
             this.TotalAmountBox.Enabled = false;
             this.TotalAmountBox.FillColor = System.Drawing.Color.White;
@@ -1093,7 +1094,7 @@
             this.TotalAmountBox.SelectionLength = 0;
             this.TotalAmountBox.SelectionStart = 0;
             this.TotalAmountBox.ShortcutsEnabled = true;
-            this.TotalAmountBox.Size = new System.Drawing.Size(152, 37);
+            this.TotalAmountBox.Size = new System.Drawing.Size(152, 40);
             this.TotalAmountBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.TotalAmountBox.TabIndex = 28;
             this.TotalAmountBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1121,7 +1122,7 @@
             this.PaidAmountBox.BorderThickness = 1;
             this.PaidAmountBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.PaidAmountBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.PaidAmountBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.PaidAmountBox.DefaultFont = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PaidAmountBox.DefaultText = "";
             this.PaidAmountBox.FillColor = System.Drawing.Color.White;
             this.PaidAmountBox.HideSelection = true;
@@ -1167,7 +1168,7 @@
             this.PaidAmountBox.SelectionLength = 0;
             this.PaidAmountBox.SelectionStart = 0;
             this.PaidAmountBox.ShortcutsEnabled = true;
-            this.PaidAmountBox.Size = new System.Drawing.Size(152, 37);
+            this.PaidAmountBox.Size = new System.Drawing.Size(152, 40);
             this.PaidAmountBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.PaidAmountBox.TabIndex = 28;
             this.PaidAmountBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1196,7 +1197,7 @@
             this.TypeBox.BorderThickness = 1;
             this.TypeBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.TypeBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TypeBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.TypeBox.DefaultFont = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TypeBox.DefaultText = "";
             this.TypeBox.Enabled = false;
             this.TypeBox.FillColor = System.Drawing.Color.White;
@@ -1220,7 +1221,7 @@
             this.TypeBox.OnActiveState = stateProperties33;
             stateProperties34.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             stateProperties34.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties34.ForeColor = System.Drawing.Color.Black;
             stateProperties34.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.TypeBox.OnDisabledState = stateProperties34;
             stateProperties35.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -1243,7 +1244,7 @@
             this.TypeBox.SelectionLength = 0;
             this.TypeBox.SelectionStart = 0;
             this.TypeBox.ShortcutsEnabled = true;
-            this.TypeBox.Size = new System.Drawing.Size(152, 37);
+            this.TypeBox.Size = new System.Drawing.Size(152, 40);
             this.TypeBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.TypeBox.TabIndex = 28;
             this.TypeBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1271,7 +1272,7 @@
             this.DuesBox.BorderThickness = 1;
             this.DuesBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.DuesBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.DuesBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.DuesBox.DefaultFont = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DuesBox.DefaultText = "";
             this.DuesBox.Enabled = false;
             this.DuesBox.FillColor = System.Drawing.Color.White;
@@ -1295,7 +1296,7 @@
             this.DuesBox.OnActiveState = stateProperties37;
             stateProperties38.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             stateProperties38.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties38.ForeColor = System.Drawing.Color.Black;
             stateProperties38.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.DuesBox.OnDisabledState = stateProperties38;
             stateProperties39.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -1318,7 +1319,7 @@
             this.DuesBox.SelectionLength = 0;
             this.DuesBox.SelectionStart = 0;
             this.DuesBox.ShortcutsEnabled = true;
-            this.DuesBox.Size = new System.Drawing.Size(152, 37);
+            this.DuesBox.Size = new System.Drawing.Size(152, 40);
             this.DuesBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.DuesBox.TabIndex = 28;
             this.DuesBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1346,7 +1347,7 @@
             this.CustomerNameBox.BorderThickness = 1;
             this.CustomerNameBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.CustomerNameBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.CustomerNameBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.CustomerNameBox.DefaultFont = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CustomerNameBox.DefaultText = "";
             this.CustomerNameBox.Enabled = false;
             this.CustomerNameBox.FillColor = System.Drawing.Color.White;
@@ -1370,7 +1371,7 @@
             this.CustomerNameBox.OnActiveState = stateProperties41;
             stateProperties42.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             stateProperties42.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties42.ForeColor = System.Drawing.Color.Black;
             stateProperties42.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.CustomerNameBox.OnDisabledState = stateProperties42;
             stateProperties43.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -1393,7 +1394,7 @@
             this.CustomerNameBox.SelectionLength = 0;
             this.CustomerNameBox.SelectionStart = 0;
             this.CustomerNameBox.ShortcutsEnabled = true;
-            this.CustomerNameBox.Size = new System.Drawing.Size(152, 37);
+            this.CustomerNameBox.Size = new System.Drawing.Size(152, 40);
             this.CustomerNameBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.CustomerNameBox.TabIndex = 28;
             this.CustomerNameBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1413,6 +1414,38 @@
             // 
             this.bunifuElipse3.ElipseRadius = 30;
             this.bunifuElipse3.TargetControl = this;
+            // 
+            // bunifuLabel14
+            // 
+            this.bunifuLabel14.AllowParentOverrides = false;
+            this.bunifuLabel14.AutoEllipsis = false;
+            this.bunifuLabel14.CursorType = null;
+            this.bunifuLabel14.Font = new System.Drawing.Font("Bebas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel14.Location = new System.Drawing.Point(15, 46);
+            this.bunifuLabel14.Name = "bunifuLabel14";
+            this.bunifuLabel14.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel14.Size = new System.Drawing.Size(124, 29);
+            this.bunifuLabel14.TabIndex = 0;
+            this.bunifuLabel14.TabStop = false;
+            this.bunifuLabel14.Text = "Customer Info";
+            this.bunifuLabel14.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel14.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel15
+            // 
+            this.bunifuLabel15.AllowParentOverrides = false;
+            this.bunifuLabel15.AutoEllipsis = false;
+            this.bunifuLabel15.CursorType = null;
+            this.bunifuLabel15.Font = new System.Drawing.Font("Bebas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel15.Location = new System.Drawing.Point(293, 46);
+            this.bunifuLabel15.Name = "bunifuLabel15";
+            this.bunifuLabel15.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel15.Size = new System.Drawing.Size(139, 29);
+            this.bunifuLabel15.TabIndex = 0;
+            this.bunifuLabel15.TabStop = false;
+            this.bunifuLabel15.Text = "Product Details";
+            this.bunifuLabel15.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel15.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // CustomerSearchBox
             // 
@@ -1568,38 +1601,6 @@
             this.ProductsSearchBox.TextChanged += new System.EventHandler(this.ProductsSearchBox_TextChanged);
             this.ProductsSearchBox.OnIconRightClick += new System.EventHandler(this.ProductsSearchBox_OnIconRightClick);
             // 
-            // bunifuLabel14
-            // 
-            this.bunifuLabel14.AllowParentOverrides = false;
-            this.bunifuLabel14.AutoEllipsis = false;
-            this.bunifuLabel14.CursorType = null;
-            this.bunifuLabel14.Font = new System.Drawing.Font("Bebas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel14.Location = new System.Drawing.Point(15, 46);
-            this.bunifuLabel14.Name = "bunifuLabel14";
-            this.bunifuLabel14.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel14.Size = new System.Drawing.Size(124, 29);
-            this.bunifuLabel14.TabIndex = 0;
-            this.bunifuLabel14.TabStop = false;
-            this.bunifuLabel14.Text = "Customer Info";
-            this.bunifuLabel14.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel14.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel15
-            // 
-            this.bunifuLabel15.AllowParentOverrides = false;
-            this.bunifuLabel15.AutoEllipsis = false;
-            this.bunifuLabel15.CursorType = null;
-            this.bunifuLabel15.Font = new System.Drawing.Font("Bebas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel15.Location = new System.Drawing.Point(293, 46);
-            this.bunifuLabel15.Name = "bunifuLabel15";
-            this.bunifuLabel15.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel15.Size = new System.Drawing.Size(139, 29);
-            this.bunifuLabel15.TabIndex = 0;
-            this.bunifuLabel15.TabStop = false;
-            this.bunifuLabel15.Text = "Product Details";
-            this.bunifuLabel15.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel15.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // Sale
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1661,7 +1662,7 @@
         private Bunifu.UI.WinForms.BunifuTextBox TypeBox;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel11;
         private Bunifu.UI.WinForms.BunifuTextBox TotalAmountBox;
-        private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton1;
+        private Bunifu.UI.WinForms.BunifuImageButton PrintBtn;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel12;
         private Bunifu.UI.WinForms.BunifuLabel CustomerIDLabel;
         private Bunifu.UI.WinForms.BunifuLabel ProductIDLabel;

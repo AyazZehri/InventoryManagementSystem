@@ -79,7 +79,23 @@ namespace InventoryManagementSystem
 
         private void PasswordTextBox_OnIconRightClick(object sender, EventArgs e)
         {
+            if (PasswordTextBox.UseSystemPasswordChar == true)
+            {
+                PasswordTextBox.UseSystemPasswordChar = false;
+                PasswordTextBox.PasswordChar = '\0';
 
+            }
+            else
+            {
+                PasswordTextBox.UseSystemPasswordChar = true;
+                PasswordTextBox.PasswordChar = '●';
+            }
+           
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

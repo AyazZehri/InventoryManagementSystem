@@ -53,16 +53,18 @@ namespace InventoryManagementSystem
 
         private void DashboardButton_Click(object sender, EventArgs e)
         {
-
+            loadForm(new Dashboard());
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             DashboardButton.Select();
+            loadForm(new Dashboard());
         }
 
         private void SaleButton_Click(object sender, EventArgs e)
         {
+
             loadForm(new Sale());
         }
 
@@ -74,11 +76,6 @@ namespace InventoryManagementSystem
         private void SaleLedgerButton_Click(object sender, EventArgs e)
         {
             loadForm(new SaleLedger());
-        }
-
-        private void bunifuPanel1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void UsersButton_Click(object sender, EventArgs e)

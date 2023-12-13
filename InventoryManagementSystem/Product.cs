@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -23,14 +24,13 @@ namespace InventoryManagementSystem
 
         int price, total, quantity, id;
 
-        private void bunifuShadowPanel6_ControlAdded(object sender, ControlEventArgs e)
-        {
-
-        }
-
         private void AddButton_Click(object sender, EventArgs e)
         {
-            Query();
+            for (int i = 0; i<=50;i++)
+            {
+                Query();
+            }
+            
         }
 
         string Refsql;
@@ -83,7 +83,7 @@ namespace InventoryManagementSystem
                 cmd.Parameters.AddWithValue("Price_Per_Unit", PriceBox.Text);
                 cmd.Parameters.AddWithValue("Total_Amount", total);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Product Successfully Added to Inventory", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Product Successfully Added to Inventory", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
             }
@@ -93,12 +93,16 @@ namespace InventoryManagementSystem
             }
             finally
             {
-                LoadData();
+                //LoadData();
             }
         }
 
+       
+
         private void LoadData()
         {
+            List<ItemCard> cards = new List<ItemCard>();
+            
             try
             {
                 MySqlConnection con = new MySqlConnection(General.ConString());
@@ -130,9 +134,11 @@ namespace InventoryManagementSystem
                         item.Quantity = dr[4].ToString();
                         item.Price = dr[5].ToString();
                         item.Click += onClickItem;
-                        ItemList.Controls.Add(item);
+                        cards.Add(item);
+                        //ItemList.Controls.Add(item);
+                       
                     }
-
+                    ItemList.Controls.AddRange(cards.ToArray());
                     //ProductsGridView.DataSource = dt;
                 }
 
@@ -152,9 +158,11 @@ namespace InventoryManagementSystem
 
         private void Product_Load(object sender, EventArgs e)
         {
+            
             LoadData();
             idLabel.Text = (GetLastID() + 1).ToString();
-
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            
         }
         private ItemCard selectedCard;
 

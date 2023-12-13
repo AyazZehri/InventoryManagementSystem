@@ -214,5 +214,40 @@ namespace InventoryManagementSystem
         {
             ClearBox();
         }
+
+        private void PassBox_TextChanged(object sender, EventArgs e)
+        {
+            if (PassBox.UseSystemPasswordChar == true)
+            {
+                PassBox.UseSystemPasswordChar = false;
+                PassBox.PasswordChar = '\0';
+
+            }
+            else
+            {
+                PassBox.UseSystemPasswordChar = true;
+                PassBox.PasswordChar = '●';
+            }
+        }
+
+        private void ConfirmBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ConfirmBox_OnIconRightClick(object sender, EventArgs e)
+        {
+            if (ConfirmBox.UseSystemPasswordChar == true)
+            {
+                ConfirmBox.UseSystemPasswordChar = false;
+                ConfirmBox.PasswordChar = '\0';
+
+            }
+            else
+            {
+                ConfirmBox.UseSystemPasswordChar = true;
+                ConfirmBox.PasswordChar = '●';
+            }
+        }
     }
 }

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
@@ -116,6 +117,7 @@ namespace InventoryManagementSystem
                         {
 
                             ItemList.Controls.Clear();
+                            ItemList.SuspendLayout();
 
                             foreach (DataRow dr in dt.Rows)
                             {
@@ -132,6 +134,8 @@ namespace InventoryManagementSystem
 
                                 ItemList.Controls.Add(item);
                             }
+                            ItemList.ResumeLayout(true);
+                            ItemList.PerformLayout();
                         }
                     }
                 }
@@ -176,9 +180,10 @@ namespace InventoryManagementSystem
 
 
         }
-
+       
         private void Sale_Load(object sender, EventArgs e)
         {
+           
             LoadDataCustomers();
             LoadDataProducts();
         }
@@ -187,6 +192,7 @@ namespace InventoryManagementSystem
         {
             Query();
             OrderQuery();
+            quantityRemoveQuery();
         }
 
         bool maxValueZeroHandle = false;
@@ -207,11 +213,21 @@ namespace InventoryManagementSystem
                 maxValueZeroHandle = false;
 
                 calculate();
-                if (quantity >= QuantityBox.Maximum - 1)
+                if (QuantityBox.Value == QuantityBox.Maximum)
+                {
                     MessageBox.Show($"Maximum Quantity of {ProductNameBox.Text} is {maxQuantity}");
+                    QuantityBox.Value = QuantityBox.Maximum;
+                    calculate();
+                }
+               
             }
 
             maxValueZeroHandle = false;
+
+            if(QuantityBox.Value == QuantityBox.Maximum)
+            {
+
+            }
         }
 
 
@@ -251,7 +267,26 @@ namespace InventoryManagementSystem
             CustomerNameBox.Text = CustomersGridView.SelectedRows[0].Cells[1].Value.ToString();
         }
 
-       
+      
+        private void InvoiceBtn_Click(object sender, EventArgs e)
+        {
+            using(PrintForm print = new PrintForm())
+            {
+                print.date = DatePicker.Value.ToString();
+                print.Ref = "Ref_No: " + (GetLastRef() + 1).ToString();
+                print.Product = ProductNameBox.Text;
+                print.Customer = CustomerNameBox.Text;
+                print.Type = CustomerNameBox.Text;
+                print.Quality = QualityBox.Text;
+                print.Quantity = QuantityBox.Text;
+                print.UnitPrice = RateBox.Text;
+                print.TotalAmount = TotalAmountBox.Text;
+                print.PaidAmount = PaidAmountBox.Text;
+                print.Dues = DuesBox.Text;
+                print.NetAmount = NetAmountBox.Text;
+                print.ShowDialog();
+            }
+        }
 
         private void PaidAmountBox_TextChanged(object sender, EventArgs e)
         {
@@ -265,7 +300,7 @@ namespace InventoryManagementSystem
             { quantity = General.ConvertToInt(QuantityBox.Text); }*/
             QuantityBox.Maximum = maxQuantity;
 
-            quantity = General.ConvertToInt(QuantityBox.Text);
+            quantity = (int)QuantityBox.Value;
 
             paid = General.ConvertToInt(PaidAmountBox.Text);
             /* dues = General.ConvertToInt(DuesBox.Text);*/
@@ -291,6 +326,25 @@ namespace InventoryManagementSystem
 
         }
 
+        private void quantityRemoveQuery()
+        {
+            try
+            {
+                using(MySqlConnection con = new MySqlConnection(General.ConString()))
+                {
+                    con.Open();
+                    string sql = $"Update products SET Quantity= Quantity-{QuantityBox.Value} WHERE ID = {ProductIDLabel.Text}";
+                    MySqlCommand cmd = new MySqlCommand(sql,con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show($"{QuantityBox.Value} items Has been Removed From Product: {ProductNameBox.Text} Stock");
+
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void Query()
         {
             /* try
@@ -307,7 +361,7 @@ namespace InventoryManagementSystem
                 cmd.Parameters.AddWithValue("@Ref_No", (GetLastRef() + 1));
                 cmd.Parameters.AddWithValue("@Date", DatePicker.Value);
                 cmd.Parameters.AddWithValue("@Customer_Name", CustomerNameBox.Text);
-                cmd.Parameters.AddWithValue("@@Customer_ID", CustomerIDLabel.Text);
+                cmd.Parameters.AddWithValue("@Customer_ID", CustomerIDLabel.Text);
                 cmd.Parameters.AddWithValue("@Product_Name", ProductNameBox.Text);
                 cmd.Parameters.AddWithValue("@Product_ID", ProductIDLabel.Text);
                 cmd.Parameters.AddWithValue("@Type", TypeBox.Text);
@@ -319,6 +373,7 @@ namespace InventoryManagementSystem
                 cmd.Parameters.AddWithValue("@Net_Amount", NetAmountBox.Text);
 
                 cmd.ExecuteNonQuery();
+                
                 MessageBox.Show("Records Have been Saved to Ledger");
             }
 

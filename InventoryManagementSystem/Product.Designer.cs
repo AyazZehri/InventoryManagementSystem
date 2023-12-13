@@ -178,7 +178,6 @@
             this.bunifuShadowPanel6.Size = new System.Drawing.Size(880, 207);
             this.bunifuShadowPanel6.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel6.TabIndex = 0;
-            this.bunifuShadowPanel6.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.bunifuShadowPanel6_ControlAdded);
             // 
             // AddButton
             // 

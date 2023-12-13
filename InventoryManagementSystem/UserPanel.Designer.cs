@@ -489,7 +489,7 @@
             this.ConfirmBox.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
             this.ConfirmBox.IconPadding = 6;
             this.ConfirmBox.IconRight = global::InventoryManagementSystem.Properties.Resources.showpass;
-            this.ConfirmBox.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.ConfirmBox.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.ConfirmBox.Lines = new string[0];
             this.ConfirmBox.Location = new System.Drawing.Point(175, 146);
             this.ConfirmBox.MaxLength = 32767;
@@ -537,6 +537,8 @@
             this.ConfirmBox.TextPlaceholder = "Enter text";
             this.ConfirmBox.UseSystemPasswordChar = true;
             this.ConfirmBox.WordWrap = true;
+            this.ConfirmBox.TextChanged += new System.EventHandler(this.ConfirmBox_TextChanged);
+            this.ConfirmBox.OnIconRightClick += new System.EventHandler(this.ConfirmBox_OnIconRightClick);
             // 
             // bunifuLabel3
             // 
@@ -579,7 +581,7 @@
             this.PassBox.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
             this.PassBox.IconPadding = 6;
             this.PassBox.IconRight = global::InventoryManagementSystem.Properties.Resources.showpass;
-            this.PassBox.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.PassBox.IconRightCursor = System.Windows.Forms.Cursors.Hand;
             this.PassBox.Lines = new string[0];
             this.PassBox.Location = new System.Drawing.Point(175, 103);
             this.PassBox.MaxLength = 32767;
@@ -627,6 +629,7 @@
             this.PassBox.TextPlaceholder = "Enter text";
             this.PassBox.UseSystemPasswordChar = true;
             this.PassBox.WordWrap = true;
+            this.PassBox.TextChanged += new System.EventHandler(this.PassBox_TextChanged);
             // 
             // bunifuLabel2
             // 

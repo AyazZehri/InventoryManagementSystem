@@ -41,10 +41,12 @@
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.MinimizeAppButton = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.MainPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.CloseButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.ProductsButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.CustomersButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -112,6 +114,7 @@
             this.bunifuPanel1.BorderRadius = 10;
             this.bunifuPanel1.BorderThickness = 2;
             this.bunifuPanel1.Controls.Add(this.MinimizeAppButton);
+            this.bunifuPanel1.Controls.Add(this.bunifuLabel3);
             this.bunifuPanel1.Controls.Add(this.MainPanel);
             this.bunifuPanel1.Controls.Add(this.CloseButton);
             this.bunifuPanel1.Controls.Add(this.bunifuShadowPanel2);
@@ -121,7 +124,6 @@
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(1155, 800);
             this.bunifuPanel1.TabIndex = 4;
-            this.bunifuPanel1.Click += new System.EventHandler(this.bunifuPanel1_Click);
             // 
             // MinimizeAppButton
             // 
@@ -157,6 +159,23 @@
             this.MinimizeAppButton.Zoom = 0;
             this.MinimizeAppButton.ZoomSpeed = 10;
             this.MinimizeAppButton.Click += new System.EventHandler(this.MinimizeAppButton_Click);
+            // 
+            // bunifuLabel3
+            // 
+            this.bunifuLabel3.AllowParentOverrides = false;
+            this.bunifuLabel3.AutoEllipsis = false;
+            this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel3.Font = new System.Drawing.Font("Bebas", 20.25F);
+            this.bunifuLabel3.ForeColor = System.Drawing.Color.Black;
+            this.bunifuLabel3.Location = new System.Drawing.Point(244, 0);
+            this.bunifuLabel3.Name = "bunifuLabel3";
+            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel3.Size = new System.Drawing.Size(314, 33);
+            this.bunifuLabel3.TabIndex = 1;
+            this.bunifuLabel3.Text = "Al-Makkah Tile and Marble Shop";
+            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // MainPanel
             // 
@@ -214,6 +233,7 @@
             this.bunifuShadowPanel2.BorderRadius = 10;
             this.bunifuShadowPanel2.BorderThickness = 1;
             this.bunifuShadowPanel2.Controls.Add(this.pictureBox1);
+            this.bunifuShadowPanel2.Controls.Add(this.bunifuLabel2);
             this.bunifuShadowPanel2.Controls.Add(this.bunifuLabel1);
             this.bunifuShadowPanel2.Controls.Add(this.ProductsButton);
             this.bunifuShadowPanel2.Controls.Add(this.CustomersButton);
@@ -247,6 +267,23 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // bunifuLabel2
+            // 
+            this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Bebas", 20.25F);
+            this.bunifuLabel2.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel2.Location = new System.Drawing.Point(58, 17);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(103, 33);
+            this.bunifuLabel2.TabIndex = 1;
+            this.bunifuLabel2.Text = "Al-Makkah";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // bunifuLabel1
             // 
             this.bunifuLabel1.AllowParentOverrides = false;
@@ -254,7 +291,7 @@
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Bebas", 18F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(13, 33);
+            this.bunifuLabel1.Location = new System.Drawing.Point(12, 49);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(198, 59);
@@ -906,6 +943,7 @@
             this.Text = "Inventory Management System";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.bunifuPanel1.ResumeLayout(false);
+            this.bunifuPanel1.PerformLayout();
             this.bunifuShadowPanel2.ResumeLayout(false);
             this.bunifuShadowPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -931,6 +969,8 @@
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton UsersButton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
     }
 }
 

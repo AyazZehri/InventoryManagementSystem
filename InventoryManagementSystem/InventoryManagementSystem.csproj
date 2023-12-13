@@ -152,11 +152,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RemiderBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemiderBox.Designer.cs">
+      <DependentUpon>RemiderBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customers.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Customers.Designer.cs">
       <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="General.cs" />
     <Compile Include="ItemCard.cs">
@@ -189,6 +201,12 @@
     <Compile Include="Orders.Designer.cs">
       <DependentUpon>Orders.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintForm.Designer.cs">
+      <DependentUpon>PrintForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,14 +227,32 @@
     <Compile Include="SaleLedger.Designer.cs">
       <DependentUpon>SaleLedger.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomDialogBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomDialogBox.Designer.cs">
+      <DependentUpon>CustomDialogBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StockRefill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockRefill.Designer.cs">
+      <DependentUpon>StockRefill.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserPanel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserPanel.Designer.cs">
       <DependentUpon>UserPanel.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RemiderBox.resx">
+      <DependentUpon>RemiderBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customers.resx">
       <DependentUpon>Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemCard.resx">
       <DependentUpon>ItemCard.cs</DependentUpon>
@@ -232,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Orders.resx">
       <DependentUpon>Orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintForm.resx">
+      <DependentUpon>PrintForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Product.resx">
       <DependentUpon>Product.cs</DependentUpon>
@@ -252,6 +291,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SaleLedger.resx">
       <DependentUpon>SaleLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomDialogBox.resx">
+      <DependentUpon>CustomDialogBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockRefill.resx">
+      <DependentUpon>StockRefill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPanel.resx">
       <DependentUpon>UserPanel.cs</DependentUpon>
@@ -296,6 +341,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Inventory.ico" />
+    <None Include="Resources\bill.png" />
+    <None Include="Resources\message.png" />
+    <None Include="Resources\Add.png" />
+    <None Include="Resources\Question.png" />
+    <None Include="Resources\asterisk.png" />
+    <None Include="Resources\Error.png" />
+    <None Include="Resources\Exclamation.png" />
     <None Include="Resources\showpass.png" />
     <None Include="Resources\uncheck.png" />
     <None Include="Resources\check1.png" />

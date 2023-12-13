@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -90,5 +91,17 @@ namespace InventoryManagementSystem
         {
             BackgroundColor = Color.FromArgb(230, 247, 255);
         }
+
+        private void ItemCard_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ItemCard_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+       
     }
 }
