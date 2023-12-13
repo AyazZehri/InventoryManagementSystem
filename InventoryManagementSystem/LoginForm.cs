@@ -74,7 +74,8 @@ namespace InventoryManagementSystem
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            Login();
+            //Login();
+            
         }
 
         private void PasswordTextBox_OnIconRightClick(object sender, EventArgs e)
@@ -96,6 +97,11 @@ namespace InventoryManagementSystem
         private void CloseButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
