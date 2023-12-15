@@ -152,67 +152,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RemiderBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RemiderBox.Designer.cs">
-      <DependentUpon>RemiderBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Customers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Customers.Designer.cs">
-      <DependentUpon>Customers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="General.cs" />
-    <Compile Include="ItemCard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ItemCard.Designer.cs">
-      <DependentUpon>ItemCard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ItemSalePanel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ItemSalePanel.Designer.cs">
-      <DependentUpon>ItemSalePanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Orders.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Orders.Designer.cs">
-      <DependentUpon>Orders.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PrintForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PrintForm.Designer.cs">
-      <DependentUpon>PrintForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Product.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Product.Designer.cs">
-      <DependentUpon>Product.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Royalty.cs">
@@ -221,66 +161,6 @@
     <Compile Include="Royalty.Designer.cs">
       <DependentUpon>Royalty.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sale.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sale.Designer.cs">
-      <DependentUpon>Sale.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SaleLedger.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SaleLedger.Designer.cs">
-      <DependentUpon>SaleLedger.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CustomDialogBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomDialogBox.Designer.cs">
-      <DependentUpon>CustomDialogBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="StockRefill.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StockRefill.Designer.cs">
-      <DependentUpon>StockRefill.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserPanel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserPanel.Designer.cs">
-      <DependentUpon>UserPanel.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="RemiderBox.resx">
-      <DependentUpon>RemiderBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Customers.resx">
-      <DependentUpon>Customers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ItemCard.resx">
-      <DependentUpon>ItemCard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ItemSalePanel.resx">
-      <DependentUpon>ItemSalePanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Orders.resx">
-      <DependentUpon>Orders.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PrintForm.resx">
-      <DependentUpon>PrintForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Product.resx">
-      <DependentUpon>Product.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -294,21 +174,6 @@
     </Compile>
     <EmbeddedResource Include="Royalty.resx">
       <DependentUpon>Royalty.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sale.resx">
-      <DependentUpon>Sale.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SaleLedger.resx">
-      <DependentUpon>SaleLedger.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomDialogBox.resx">
-      <DependentUpon>CustomDialogBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StockRefill.resx">
-      <DependentUpon>StockRefill.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserPanel.resx">
-      <DependentUpon>UserPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

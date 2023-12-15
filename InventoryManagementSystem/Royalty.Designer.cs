@@ -36,9 +36,10 @@
             // 
             this.bunifuLabel1.AllowParentOverrides = false;
             this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Bebas", 27.75F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(25, 63);
+            this.bunifuLabel1.Location = new System.Drawing.Point(51, 79);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(307, 88);
@@ -54,6 +55,7 @@
             this.ClientSize = new System.Drawing.Size(417, 263);
             this.Controls.Add(this.bunifuLabel1);
             this.Name = "Royalty";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Royalty";
             this.ResumeLayout(false);
             this.PerformLayout();
