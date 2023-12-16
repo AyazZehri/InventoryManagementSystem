@@ -16,7 +16,11 @@ namespace InventoryManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< Updated upstream
             Application.Run(new Royalty());
+=======
+            Application.Run(new MainForm());
+>>>>>>> Stashed changes
         }
     }
 }
